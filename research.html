@@ -3,51 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAILab | 연구</title>
+  <title>SAILab | Research</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">SAILab</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
-      <nav class="site-nav" id="siteNav">
-        <a href="index.html">홈</a>
-        <a href="research.html">연구</a>
-        <a href="publications.html">출판물</a>
-        <a href="members.html">멤버</a>
-        <a href="contact.html">문의</a>
+      <a href="index.html" class="brand">
+        <span class="brand-name">SAILab</span>
+        <span class="brand-tag">Scalable AI Lab</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="members.html" class="nav-link">Members</a>
+        <a href="research.html" class="nav-link active">Research</a>
+        <a href="publications.html" class="nav-link">Publication</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="page-section">
-      <h1>연구 분야</h1>
-      <p>SAILab은 혁신적인 연구를 통해 실질적 영향을 만드는 것을 목표로 합니다.</p>
-      <div class="research-grid">
-        <article class="research-card">
-          <h2>인공지능</h2>
-          <p>딥러닝, 강화 학습, 설명 가능한 AI를 활용한 기초 및 응용 연구.</p>
-        </article>
-        <article class="research-card">
-          <h2>로보틱스</h2>
-          <p>자율 이동, 센서 융합, 인간-로봇 상호작용 기술 개발.</p>
-        </article>
-        <article class="research-card">
-          <h2>데이터 과학</h2>
-          <p>대규모 데이터 분석, 예측 모델, 시각화 및 인사이트 추출.</p>
-        </article>
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Research</h1>
+        <p>SAILab pursues research on AI systems that work across domains, scale efficiently, and remain manageable within academic settings.</p>
+
+        <h2>Research Interest</h2>
+        <p><strong>AI Principles</strong> – Study the fundamental structure and learning mechanisms of modern AI models.</p>
+        <p><strong>Scalability & Efficiency</strong> – Design architectures and training strategies for scalable and efficient AI.</p>
+        <p><strong>Generalization</strong> – Develop AI systems that adapt across domains, tasks, and data modalities.</p>
+        <p><strong>Foundation Model</strong> – Research large-scale models from a core architectural and training perspective.</p>
+        <p><strong>Academic Sustainability</strong> – Make large models trainable even with limited resources compared to industry.</p>
+
+        <h2>Project</h2>
+        <p>We build scalable training workflows, investigate adaptive multi-domain systems, analyze foundation model behavior, and develop efficient academic AI methods for university researchers.</p>
+        <ul class="publication-list">
+          <li class="publication-item">
+            <a class="publication-title" href="https://github.com/doihye/Adaptive-confidence-thresholding" target="_blank" rel="noopener noreferrer">[P1] Adaptive Confidence Thresholding for Monocular Depth Estimation</a>
+            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Sunok Kim, Seungryoung Kim, and Dongbo Min · IEEE ICCV, 2021</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://arxiv.org/pdf/2209.02518" target="_blank" rel="noopener noreferrer">[P2] Sequential Cross Attention Based Multi-Task Learning</a>
+            <p class="publication-meta">Sunkyung Kim, Hyesong Choi, and Dongbo Min · IEEE ICIP, 2022</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://sites.google.com/view/iccv23-ear" target="_blank" rel="noopener noreferrer">[P3] Environment Agnostic Representation for Visual Reinforcement Learning</a>
+            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Seongwon Jeong, and Dongbo Min · IEEE ICCV, 2023</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://sites.google.com/view/cvpr23-psrl" target="_blank" rel="noopener noreferrer">[P4] Local-Guided Global: Paired Similarity Representation for Visual Reinforcement Learning</a>
+            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Wonil Song, Sangryul Jeon, Kwanghoon Sohn, and Dongbo Min · IEEE CVPR, 2023</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://sites.google.com/view/eccv24-sbam" target="_blank" rel="noopener noreferrer">[P5] Salience-Based Adaptive Masking: Revisiting Token Dynamics for Enhanced Pre-training</a>
+            <p class="publication-meta">Hyesong Choi, Hyejin Park, Kwang Moo Yi, Sungmin Cha, and Dongbo Min · ECCV, 2024</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://sites.google.com/view/eccv24-mto" target="_blank" rel="noopener noreferrer">[P6] Emerging Property of Masked TOken for Effective Pre-training</a>
+            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Seyoung Joung, Hyejin Park, Jiyeong Kim, and Dongbo Min · ECCV, 2024</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://w-song11.github.io/SimGRL/" target="_blank" rel="noopener noreferrer">[P7] A Simple Framework for Generalization in Visual RL under Dynamic Scene Perturbations</a>
+            <p class="publication-meta">Wonil Song, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min · NeurIPS, 2024</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://github.com/punpunzaz10/TADFormer?tab=readme-ov-file#features" target="_blank" rel="noopener noreferrer">[P8] TADFormer: Task-Adaptive Dynamic TransFormer for Efficient Multi-Task Learning</a>
+            <p class="publication-meta">Seungmin Baek, Soyul Lee, Hayeon Jo, Hyesong Choi, and Dongbo Min · IEEE CVPR, 2025</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://github.com/0ju-un/RobIA" target="_blank" rel="noopener noreferrer">[P9] RobIA: Robust Instance-aware Continual Test-time Adaptation for Deep Stereo</a>
+            <p class="publication-meta">Jueun Ko, Hyewon Park, Hyesong Choi, and Dongbo Min · NeurIPS, 2025</p>
+          </li>
+          <li class="publication-item">
+            <a class="publication-title" href="https://arxiv.org/pdf/2409.02846" target="_blank" rel="noopener noreferrer">[P10] MaDis-Stereo: Enhanced Stereo Matching via Distilled Masked Image Modeling</a>
+            <p class="publication-meta">Jihye Ahn, Hyesong Choi, Sommin Kim, and Dongbo Min · IEEE ACCESS (IF=3.476), 2025</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 SAILab. 모든 권리 보유.</p>
+    <div class="container footer-inner">
+      <p>SAILab · Scalable AI Lab</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
