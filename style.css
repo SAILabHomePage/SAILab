@@ -120,6 +120,14 @@ h1, h2, h3 {
   margin: 0 0 18px;
   color: var(--text);
 }
+h1 + p,
+h2 + p,
+h3 + p,
+h1 + ul,
+h2 + ul,
+h3 + ul {
+  margin-left: 1.1rem;
+}
 h1 {
   font-size: clamp(2rem, 3vw, 2.8rem);
 }
