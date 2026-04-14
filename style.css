@@ -116,9 +116,7 @@ a {
 .section {
   padding: 40px 0;
 }
-.section-secondary {
-  background: var(--surface);
-}
+
 h1, h2, h3 {
   margin: 0 0 18px;
   color: var(--accent);
@@ -236,12 +234,11 @@ h2 {
   gap: 16px;
 }
 .news-item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
-  color: var(--muted);
+  color: var(--text);
+  line-height: 1.8;
+}
+.news-item + .news-item {
+  margin-top: 12px;
 }
 .news-item span {
   font-size: 0.9rem;
