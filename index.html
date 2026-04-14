@@ -3,54 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAILab | 홈</title>
+  <title>SAILab | Home</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">SAILab</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">☰</button>
-      <nav class="site-nav" id="siteNav">
-        <a href="index.html">홈</a>
-        <a href="research.html">연구</a>
-        <a href="publications.html">출판물</a>
-        <a href="members.html">멤버</a>
-        <a href="contact.html">문의</a>
+      <a href="index.html" class="brand">
+        <span class="brand-name">SAILab</span>
+        <span class="brand-tag">Scalable AI Lab</span>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="members.html" class="nav-link">Members</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="publications.html" class="nav-link">Publication</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <main class="container">
+  <main>
     <section class="hero">
-      <h1>SAILab에 오신 것을 환영합니다</h1>
-      <p>인공지능, 로보틱스, 데이터 과학을 통해 더 나은 미래를 설계합니다.</p>
-      <p>SAILab은 연구, 협업, 출판 및 교육을 통해 혁신을 실현합니다.</p>
-      <a href="research.html" class="btn">연구 보기</a>
+      <div class="container">
+        <p class="eyebrow">From Principle to Practice</p>
+        <h1>Building General, Scalable, and Efficient AI</h1>
+        <p class="hero-text">SAILab explores AI research from theory to implementation. We develop models and systems that are general, scalable, efficient, and sustainable in academic settings.</p>
+      </div>
     </section>
 
-    <section class="overview">
-      <article>
-        <h2>연구 분야</h2>
-        <p>AI 기반 시스템, 컴퓨터 비전, 자연어 처리, 자율 로봇 기술 등 다양한 분야에서 융합 연구를 수행합니다.</p>
-      </article>
-      <article>
-        <h2>최근 출판물</h2>
-        <p>최신 논문, 학회 발표, 기술 보고서를 통해 연구 성과를 공유합니다.</p>
-      </article>
-      <article>
-        <h2>팀 멤버</h2>
-        <p>교수진, 연구원, 학생이 함께 과제를 수행하며 협업 문화를 만들어갑니다.</p>
-      </article>
+    <section class="section">
+      <div class="container">
+        <h2>Research Interest</h2>
+        <p>SAILab focuses on five core research areas that shape our approach to modern AI:</p>
+        <ul class="plain-list">
+          <li>AI Principles</li>
+          <li>Scalability & Efficiency</li>
+          <li>Generalization</li>
+          <li>Foundation Model</li>
+          <li>Academic Sustainability</li>
+        </ul>
+        <p>We study the principles behind learning systems, design architectures for efficient scale, enable robust adaptation across domains, investigate foundation models from a structural perspective, and make large model research accessible with limited resources.</p>
+      </div>
     </section>
+
+    <section class="section section-secondary">
+      <div class="container">
+        <h2>News</h2>
+        <div class="news-list">
+          <div class="news-year-group">
+            <h3>2026</h3>
+            <div class="news-item"><span>[2026.03]</span> Granted the NRF Outstanding Early-Career Researcher Program (우수신진연구), funded by the National Research Foundation of Korea (NRF).</div>
+            <div class="news-item"><span>[2026.01]</span> CLDA is accepted at ICASSP 2026.</div>
+            <div class="news-item"><span>[2026.01]</span> Prof. Hyesong Choi will visit UIUC for two months to conduct collaborative research on Social AI and deepfake detection with Prof. Jim Rehg’s group.</div>
+          </div>
+          <div class="news-year-group">
+            <h3>2025</h3>
+            <div class="news-item"><span>[2025.12]</span> RobIA is accepted at NeurIPS 2025.</div>
+            <div class="news-item"><span>[2025.11]</span> Prof. Hyesong Choi has been appointed as a Board Member (학회 이사) of the International Conference on ICT Convergence (ICTC).</div>
+            <div class="news-item"><span>[2025.09]</span> Prof. Hyesong Choi joins Soongsil University as an Assistant Professor in the School of Electrical Engineering.
+              <div class="news-related">Related Article 1 / Related Article 2 / Related Article 3 / Related Article 4</div>
+            </div>
+            <div class="news-item"><span>[2025.08]</span> Prof. Hyesong Choi received her Ph.D. in Computer Science and Engineering from Ewha Womans University, with a research focus on large-scale model pre-training, and was awarded the Outstanding Dissertation Award (Graduate School-wide).</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2026 SAILab. 모든 권리 보유.</p>
+    <div class="container footer-inner">
+      <p>SAILab · Scalable AI Lab</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
