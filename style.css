@@ -240,6 +240,7 @@ h2 {
   display: grid;
   gap: 0;
   margin-top: 24px;
+  margin-left: 1.1rem;
 }
 .news-year-group {
   margin-top: 36px;
@@ -251,6 +252,9 @@ h2 {
   margin-bottom: 14px;
   font-size: 1.05rem;
   color: var(--text);
+}
+.news-year-group .news-item {
+  margin-left: 1.1rem;
 }
 .news-item {
   padding: 12px 0;
