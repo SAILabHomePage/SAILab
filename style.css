@@ -1,12 +1,12 @@
 
 :root {
   color-scheme: light;
-  --bg: #ffffff;
+  --bg: #eef2f8;
   --surface: #ffffff;
-  --text: #111111;
-  --muted: #5f6b7c;
-  --accent: #111111;
-  --border: #e9ecef;
+  --text: #121212;
+  --muted: #6f7485;
+  --accent: #021843;
+  --border: #d8e2ef;
 }
 * {
   box-sizing: border-box;
@@ -34,7 +34,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: #fff;
+  background: var(--surface);
   border-bottom: 1px solid var(--border);
 }
 .header-inner {
@@ -367,7 +367,7 @@ h2 {
     flex-direction: column;
     gap: 16px;
     padding: 20px 24px;
-    background: #fff;
+    background: var(--surface);
     border-bottom: 1px solid var(--border);
   }
   .site-nav.open {
