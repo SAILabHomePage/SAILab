@@ -299,10 +299,10 @@ h2 {
   margin: 20px 0 0;
   padding: 0;
   display: grid;
-  gap: 16px;
+  gap: 10px;
 }
 .publication-item {
-  padding: 16px 0;
+  padding: 10px 0;
   border: none;
   border-radius: 0;
   background: transparent;
@@ -318,7 +318,7 @@ h2 {
   text-decoration: underline;
 }
 .publication-meta {
-  margin: 10px 0 0;
+  margin: 6px 0 0;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.7;
