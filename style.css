@@ -304,6 +304,9 @@ h2 {
   display: grid;
   gap: 16px;
 }
+.publications-section .journal-heading {
+  margin-top: 34px;
+}
 .research-project-list {
   margin-top: 24px;
 }
