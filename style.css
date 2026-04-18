@@ -294,6 +294,9 @@ h2 {
 .indent-text {
   margin-left: 2.4rem;
 }
+.contact-detail {
+  color: var(--muted);
+}
 .publication-list {
   list-style: none;
   margin: 20px 0 0;
