@@ -442,12 +442,15 @@ h2 {
 @media (max-width: 840px) {
   .header-inner {
     grid-template-columns: 1fr auto;
+    position: relative;
   }
+
   .site-nav {
     position: absolute;
-    top: 68px;
+    top: calc(100% + 1px);
     left: 0;
     right: 0;
+    z-index: 30;
     display: none;
     flex-direction: column;
     gap: 16px;
@@ -455,26 +458,35 @@ h2 {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
   }
+
   .site-nav.open {
     display: flex;
   }
+
   .nav-toggle {
     display: inline-flex;
+    justify-self: end;
+    align-self: center;
+    flex-direction: column;
   }
+
   .map-grid,
   .student-grid,
   .profile-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
 @media (max-width: 560px) {
   .header-inner {
-    grid-template-columns: 1fr;
-    row-gap: 12px;
+    grid-template-columns: 1fr auto;
+    row-gap: 0;
   }
+
   .hero {
     padding-top: 40px;
   }
+
   .student-grid,
   .map-grid,
   .profile-grid {
