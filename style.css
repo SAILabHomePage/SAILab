@@ -536,16 +536,23 @@ h2 {
   margin-left: 1.5rem;
   max-width: 980px;
 }
-
 .research-line {
   margin: 0 0 16px;
   line-height: 1.9;
   color: var(--text);
+  font-weight: 400;
+}
+
+.research-line strong {
+  font-weight: 400;
+  color: inherit;
 }
 
 .research-accent {
-  color: #e74c3c;
+  color: var(--text);
+  font-weight: 700;
 }
+
 
 @media (max-width: 560px) {
   .research-interest-block {
