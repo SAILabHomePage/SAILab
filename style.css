@@ -531,3 +531,29 @@ h2 {
     gap: 6px;
   }
 }
+.research-interest-block {
+  margin-top: 20px;
+  margin-left: 1.5rem;
+  max-width: 980px;
+}
+
+.research-line {
+  margin: 0 0 16px;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.research-accent {
+  color: #e74c3c;
+}
+
+@media (max-width: 560px) {
+  .research-interest-block {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .research-line {
+    line-height: 1.7;
+  }
+}
