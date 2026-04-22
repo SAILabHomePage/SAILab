@@ -589,6 +589,10 @@ h2 {
 }
 
 /* Research Direction */
+.direction-title {
+  margin-top: 56px;
+}
+
 .direction-table {
   margin-top: 20px;
   margin-left: 1.5rem;
