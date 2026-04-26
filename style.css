@@ -395,6 +395,66 @@ h2 {
   text-decoration: underline;
 }
 
+.member-section-stack {
+  display: grid;
+  gap: 22px;
+  margin-top: 24px;
+  margin-left: 1.1rem;
+  max-width: 980px;
+}
+
+.member-section-card {
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
+}
+
+.member-section-card h2 {
+  margin-bottom: 18px;
+}
+
+.member-section-card .member-list {
+  margin-top: 0;
+  gap: 28px;
+}
+
+.member-section-card .member-item {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.member-section-card .student-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.member-section-card .student-list .member-item {
+  gap: 20px;
+}
+
+@media (max-width: 840px) {
+  .member-section-card .student-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .member-section-stack {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .member-section-card {
+    padding: 18px 16px;
+  }
+}
+
 /* Professor card는 넓게 1줄 */
 .member-list.professor-list {
   grid-template-columns: 1fr;
