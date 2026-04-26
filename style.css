@@ -180,7 +180,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Home - Research Interest (tag style) */
+/* Home - Research Interest */
 .interest-grid {
   display: flex;
   flex-wrap: wrap;
@@ -209,7 +209,7 @@ h2 {
   transform: translateY(-1px);
 }
 
-/* Home - Research Direction (image card style, no numbers) */
+/* Home - Research Direction */
 .direction-title {
   margin-top: 56px;
 }
@@ -315,30 +315,43 @@ h2 {
   font-weight: 700;
 }
 
-/* Members */
-.member-list {
+/* Members - group card style */
+.member-section-stack {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 22px;
   margin-top: 24px;
+  margin-left: 1.1rem;
+  max-width: 980px;
 }
 
-.member-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 22px;
+.member-section-card {
   padding: 20px 22px;
   border: 1px solid var(--border);
   border-radius: 16px;
   background: var(--surface);
   box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
-.member-item:hover {
-  transform: translateY(-2px);
-  border-color: rgba(2, 24, 67, 0.14);
-  box-shadow: 0 12px 28px rgba(2, 24, 67, 0.08);
+.member-section-card h2 {
+  margin-bottom: 18px;
+}
+
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 0;
+}
+
+.member-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .profile-photo {
@@ -393,132 +406,6 @@ h2 {
 
 .member-contact a:hover {
   text-decoration: underline;
-}
-
-.member-section-stack {
-  display: grid;
-  gap: 22px;
-  margin-top: 24px;
-  margin-left: 1.1rem;
-  max-width: 980px;
-}
-
-.member-section-card {
-  padding: 20px 22px;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: var(--surface);
-  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
-}
-
-.member-section-card h2 {
-  margin-bottom: 18px;
-}
-
-.member-section-card .member-list {
-  margin-top: 0;
-  gap: 28px;
-}
-
-.member-section-card .member-item {
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
-
-.member-section-card .student-list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.member-section-card .student-list .member-item {
-  gap: 20px;
-}
-
-@media (max-width: 840px) {
-  .member-section-card .student-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  .member-section-stack {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .member-section-card {
-    padding: 18px 16px;
-  }
-}
-
-/* Professor card는 넓게 1줄 */
-.member-list.professor-list {
-  grid-template-columns: 1fr;
-  max-width: 860px;
-}
-
-/* Students는 카드형 2열 */
-.member-list.student-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-/* 넓은 화면에서는 3열까지 */
-@media (min-width: 1100px) {
-  .member-list.student-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 840px) {
-  .member-list,
-  .member-list.student-list {
-    grid-template-columns: 1fr;
-  }
-
-  .member-item {
-    gap: 18px;
-    padding: 18px;
-  }
-
-  .profile-photo {
-    width: 110px;
-  }
-
-  .profile-photo img {
-    width: 110px;
-    height: 144px;
-  }
-}
-
-@media (max-width: 560px) {
-  .member-list {
-    gap: 16px;
-  }
-
-  .member-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 18px 16px;
-  }
-
-  .profile-photo {
-    width: 132px;
-    margin: 0 auto;
-  }
-
-  .profile-photo img {
-    width: 132px;
-    height: 170px;
-  }
-
-  .member-info {
-    align-items: center;
-  }
 }
 
 /* Upload / preview */
@@ -657,28 +544,6 @@ h2 {
   line-height: 1.7;
 }
 
-@media (max-width: 560px) {
-  .news-list {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-
-  .news-year-group .news-item {
-    margin-left: 0;
-  }
-
-  .news-item {
-    padding: 16px 16px;
-    border-radius: 14px;
-  }
-  
-  .contact-card-stack {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-}
-
-
 /* Contact */
 .address-label {
   margin-left: 1.2rem;
@@ -754,18 +619,6 @@ h2 {
   border-radius: 14px;
 }
 
-.contact-info-block {
-  margin-left: 1.2rem;
-}
-
-.contact-info-block h3 {
-  margin: 0 0 8px;
-}
-
-.contact-info-block p {
-  margin: 0 0 10px;
-}
-
 /* Publications */
 .publication-list {
   list-style: none;
@@ -808,13 +661,6 @@ h2 {
   color: var(--muted);
   font-size: 0.94rem;
   line-height: 1.7;
-}
-
-@media (max-width: 560px) {
-  .publication-item {
-    padding: 16px 16px;
-    border-radius: 14px;
-  }
 }
 
 /* Other grids */
@@ -886,19 +732,6 @@ h2 {
     flex-direction: column;
   }
 
-  .member-item {
-    gap: 24px;
-  }
-
-  .profile-photo {
-    width: 130px;
-  }
-
-  .profile-photo img {
-    width: 130px;
-    height: 168px;
-  }
-
   .map-grid,
   .student-grid,
   .profile-grid {
@@ -919,7 +752,10 @@ h2 {
 
   .interest-grid,
   .direction-visual-grid,
-  .research-interest-block {
+  .research-interest-block,
+  .news-list,
+  .contact-card-stack,
+  .member-section-stack {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
@@ -939,8 +775,8 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .member-list {
-    gap: 40px;
+  .member-section-card {
+    padding: 18px 16px;
   }
 
   .member-item {
@@ -951,13 +787,13 @@ h2 {
   }
 
   .profile-photo {
-    width: 145px;
+    width: 132px;
     margin: 0 auto;
   }
 
   .profile-photo img {
-    width: 145px;
-    height: 188px;
+    width: 132px;
+    height: 170px;
   }
 
   .member-info {
@@ -974,5 +810,15 @@ h2 {
   .interest-card {
     font-size: 0.88rem;
     padding: 9px 14px;
+  }
+
+  .news-year-group .news-item {
+    margin-left: 0;
+  }
+
+  .news-item,
+  .publication-item {
+    padding: 16px 16px;
+    border-radius: 14px;
   }
 }
