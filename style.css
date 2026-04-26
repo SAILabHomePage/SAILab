@@ -611,6 +611,18 @@ h2 {
   border-radius: 14px;
 }
 
+.contact-info-block {
+  margin-left: 1.2rem;
+}
+
+.contact-info-block h3 {
+  margin: 0 0 8px;
+}
+
+.contact-info-block p {
+  margin: 0 0 10px;
+}
+
 /* Publications */
 .publication-list {
   list-style: none;
