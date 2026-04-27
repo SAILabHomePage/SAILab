@@ -822,3 +822,56 @@ h2 {
     border-radius: 14px;
   }
 }
+
+.research-detail-card,
+.research-direction-card {
+  margin-top: 24px;
+  margin-left: 1.1rem;
+  max-width: 980px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
+}
+
+.research-detail-card .research-interest-block,
+.research-direction-card .research-direction-block {
+  margin-top: 0;
+  margin-left: 0;
+  max-width: none;
+}
+
+.research-detail-card .research-line:last-child,
+.research-direction-line:last-child {
+  margin-bottom: 0;
+}
+
+.research-direction-title {
+  margin-top: 56px;
+}
+
+.research-direction-block {
+  display: grid;
+  gap: 16px;
+}
+
+.research-direction-line {
+  margin: 0;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.research-direction-line strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+@media (max-width: 560px) {
+  .research-detail-card,
+  .research-direction-card {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 18px 16px;
+  }
+}
