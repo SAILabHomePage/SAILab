@@ -875,3 +875,40 @@ h2 {
     padding: 18px 16px;
   }
 }
+
+.topic-tab {
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.topic-tab.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(2, 24, 67, 0.06);
+}
+
+.topic-tab:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(2, 24, 67, 0.06);
+}
+
+.interest-card:active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(2, 24, 67, 0.06);
+}
+
+.topic-panels {
+  margin-top: 24px;
+}
+
+.topic-panel {
+  display: none;
+}
+
+.topic-panel.active {
+  display: block;
+}
