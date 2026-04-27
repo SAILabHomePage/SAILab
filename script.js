@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (uploadPanel) {
       ['dragenter', 'dragover'].forEach((eventName) => {
-        uploadPanel.addEventListener(eventName, (e) => {
+        uploadPanel.addEventListener(eventName, function (e) {
           e.preventDefault();
           e.stopPropagation();
           uploadPanel.classList.add('drag-over');
@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
       ['dragleave', 'drop'].forEach((eventName) => {
-        uploadPanel.addEventListener(eventName, (e) => {
+        uploadPanel.addEventListener(eventName, function (e) {
           e.preventDefault();
           e.stopPropagation();
           uploadPanel.classList.remove('drag-over');
         });
       });
 
-      uploadPanel.addEventListener('drop', (e) => {
+      uploadPanel.addEventListener('drop', function (e) {
         const files = e.dataTransfer.files;
         if (files && files.length) {
           imageUpload.files = files;
@@ -98,6 +98,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function updateTopicUrl(topic) {
+    const url = new URL(window.location.href);
+
+    if (topic) {
+      url.searchParams.set('topic', topic);
+      url.hash = 'research-interest';
+    } else {
+      url.searchParams.delete('topic');
+      url.hash = 'research-interest';
+    }
+
+    history.replaceState(null, '', url.toString());
+  }
+
   if (topicTabs.length && topicPanels.length) {
     const params = new URLSearchParams(window.location.search);
     const initialTopic = params.get('topic');
@@ -107,12 +121,15 @@ document.addEventListener('DOMContentLoaded', function () {
     topicTabs.forEach((tab) => {
       tab.addEventListener('click', function () {
         const topic = tab.dataset.topic;
-        activateTopic(topic);
+        const isAlreadyActive = tab.classList.contains('active');
 
-        const url = new URL(window.location.href);
-        url.searchParams.set('topic', topic);
-        url.hash = 'research-interest';
-        history.replaceState(null, '', url.toString());
+        if (isAlreadyActive) {
+          activateTopic(null);
+          updateTopicUrl(null);
+        } else {
+          activateTopic(topic);
+          updateTopicUrl(topic);
+        }
       });
     });
   }
