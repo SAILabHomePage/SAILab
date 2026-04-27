@@ -878,8 +878,10 @@ h2 {
 
 .topic-tab {
   appearance: none;
+  -webkit-appearance: none;
   cursor: pointer;
   font: inherit;
+  font-weight: 600;
 }
 
 .topic-tab.active {
