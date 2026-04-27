@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+}
+
 .container {
   width: min(1080px, calc(100% - 32px));
   margin: 0 auto;
@@ -137,7 +141,7 @@ a {
   font-size: 1.05rem;
 }
 
-/* Common Section */
+/* Common */
 .section {
   padding: 80px 0 56px;
 }
@@ -180,7 +184,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Home - Research Interest */
+/* Home / Research common tags */
 .interest-grid {
   display: flex;
   flex-wrap: wrap;
@@ -200,7 +204,7 @@ h2 {
   font-weight: 600;
   letter-spacing: -0.01em;
   border-radius: 999px;
-  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
 .interest-card:hover {
@@ -209,7 +213,7 @@ h2 {
   transform: translateY(-1px);
 }
 
-/* Home - Research Direction */
+/* Home - Research Direction image cards */
 .direction-title {
   margin-top: 56px;
 }
@@ -217,27 +221,29 @@ h2 {
 .direction-visual-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 18px;
   margin-top: 20px;
   margin-left: 1.5rem;
-  max-width: 980px;
+  max-width: 920px;
 }
 
 .direction-visual-card {
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 16px;
   border: 1px solid var(--border);
   background: #0f172a;
-  min-height: 240px;
-  box-shadow: 0 10px 30px rgba(2, 24, 67, 0.08);
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  min-height: 180px;
+  max-width: 285px;
+  margin: 0 auto;
+  box-shadow: 0 10px 24px rgba(2, 24, 67, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
 }
 
 .direction-visual-card img {
   width: 100%;
   height: 100%;
-  min-height: 240px;
+  min-height: 180px;
   display: block;
   object-fit: cover;
   filter: saturate(0.92) contrast(0.95) brightness(0.82);
@@ -250,24 +256,33 @@ h2 {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(7, 12, 24, 0.82) 8%,
-    rgba(7, 12, 24, 0.28) 48%,
+    rgba(7, 12, 24, 0.82) 10%,
+    rgba(7, 12, 24, 0.30) 50%,
     rgba(7, 12, 24, 0.08) 100%
   );
 }
 
 .direction-visual-content {
   position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
   z-index: 2;
+}
+
+.direction-visual-num {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .direction-visual-content h3 {
   margin: 0;
   color: #ffffff;
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: -0.01em;
@@ -276,7 +291,7 @@ h2 {
 .direction-visual-card:hover {
   transform: translateY(-2px);
   border-color: rgba(2, 24, 67, 0.18);
-  box-shadow: 0 14px 36px rgba(2, 24, 67, 0.14);
+  box-shadow: 0 14px 28px rgba(2, 24, 67, 0.12);
 }
 
 .direction-visual-card:hover img {
@@ -315,7 +330,110 @@ h2 {
   font-weight: 700;
 }
 
-/* Members - group card style */
+.research-detail-card,
+.research-direction-card {
+  margin-top: 24px;
+  margin-left: 1.1rem;
+  max-width: 980px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
+}
+
+.research-detail-card .research-interest-block,
+.research-direction-card .research-direction-block {
+  margin-top: 0;
+  margin-left: 0;
+  max-width: none;
+}
+
+.research-detail-card .research-line:last-child,
+.research-direction-line:last-child {
+  margin-bottom: 0;
+}
+
+.research-direction-title {
+  margin-top: 56px;
+}
+
+.research-direction-block {
+  display: grid;
+  gap: 16px;
+}
+
+.research-direction-line {
+  margin: 0;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.research-direction-line strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Research tabs */
+.topic-tab {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.topic-tab.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(2, 24, 67, 0.06);
+}
+
+.topic-tab:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(2, 24, 67, 0.06);
+}
+
+.interest-card:active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(2, 24, 67, 0.06);
+}
+
+.topic-panels {
+  margin-top: 24px;
+}
+
+.topic-panel {
+  display: none;
+}
+
+.topic-panel.active {
+  display: block;
+}
+
+.topic-empty {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.publication-description {
+  margin: 8px 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.publication-title.no-link {
+  color: var(--text);
+  cursor: default;
+  text-decoration: none;
+}
+
+/* Members - Professor/Students group cards */
 .member-section-stack {
   display: grid;
   gap: 22px;
@@ -525,7 +643,9 @@ h2 {
   box-shadow: 0 12px 28px rgba(2, 24, 67, 0.08);
 }
 
+.news-item span,
 .news-date {
+  display: block;
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 700;
@@ -663,7 +783,7 @@ h2 {
   line-height: 1.7;
 }
 
-/* Other grids */
+/* Optional utility grids */
 .profile-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -698,9 +818,11 @@ h2 {
 @media (max-width: 980px) {
   .direction-visual-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 620px;
   }
 }
 
+/* Small tablet */
 @media (max-width: 840px) {
   .header-inner {
     grid-template-columns: 1fr auto;
@@ -753,6 +875,8 @@ h2 {
   .interest-grid,
   .direction-visual-grid,
   .research-interest-block,
+  .research-detail-card,
+  .research-direction-card,
   .news-list,
   .contact-card-stack,
   .member-section-stack {
@@ -762,11 +886,12 @@ h2 {
 
   .direction-visual-grid {
     grid-template-columns: 1fr;
+    max-width: 320px;
   }
 
   .direction-visual-card,
   .direction-visual-card img {
-    min-height: 200px;
+    min-height: 170px;
   }
 
   .student-grid,
@@ -775,7 +900,9 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .member-section-card {
+  .member-section-card,
+  .research-detail-card,
+  .research-direction-card {
     padding: 18px 16px;
   }
 
@@ -803,7 +930,8 @@ h2 {
     gap: 6px;
   }
 
-  .research-line {
+  .research-line,
+  .research-direction-line {
     line-height: 1.7;
   }
 
@@ -821,96 +949,9 @@ h2 {
     padding: 16px 16px;
     border-radius: 14px;
   }
-}
 
-.research-detail-card,
-.research-direction-card {
-  margin-top: 24px;
-  margin-left: 1.1rem;
-  max-width: 980px;
-  padding: 20px 22px;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: var(--surface);
-  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
-}
-
-.research-detail-card .research-interest-block,
-.research-direction-card .research-direction-block {
-  margin-top: 0;
-  margin-left: 0;
-  max-width: none;
-}
-
-.research-detail-card .research-line:last-child,
-.research-direction-line:last-child {
-  margin-bottom: 0;
-}
-
-.research-direction-title {
-  margin-top: 56px;
-}
-
-.research-direction-block {
-  display: grid;
-  gap: 16px;
-}
-
-.research-direction-line {
-  margin: 0;
-  line-height: 1.9;
-  color: var(--text);
-}
-
-.research-direction-line strong {
-  font-weight: 700;
-  color: var(--text);
-}
-
-@media (max-width: 560px) {
-  .research-detail-card,
-  .research-direction-card {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 18px 16px;
+  .contact-card {
+    padding: 16px 16px;
+    border-radius: 14px;
   }
-}
-
-.topic-tab {
-  appearance: none;
-  -webkit-appearance: none;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 700;
-}
-
-.topic-tab.active {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(2, 24, 67, 0.06);
-}
-
-.topic-tab:focus-visible {
-  outline: none;
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(2, 24, 67, 0.06);
-}
-
-.interest-card:active {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: rgba(2, 24, 67, 0.06);
-}
-
-.topic-panels {
-  margin-top: 24px;
-}
-
-.topic-panel {
-  display: none;
-}
-
-.topic-panel.active {
-  display: block;
 }
