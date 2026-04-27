@@ -78,22 +78,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const topicTabs = document.querySelectorAll('.topic-tab');
   const topicPanels = document.querySelectorAll('.topic-panel');
+  const topicDefaultPanel = document.querySelector('.topic-default-panel');
 
   function activateTopic(topic) {
     if (!topicTabs.length || !topicPanels.length) return;
 
+    const hasTopic = Boolean(topic);
+
     topicTabs.forEach((tab) => {
-      tab.classList.toggle('active', tab.dataset.topic === topic);
+      tab.classList.toggle('active', hasTopic && tab.dataset.topic === topic);
     });
 
     topicPanels.forEach((panel) => {
-      panel.classList.toggle('active', panel.dataset.topic === topic);
+      panel.classList.toggle('active', hasTopic && panel.dataset.topic === topic);
     });
+
+    if (topicDefaultPanel) {
+      topicDefaultPanel.classList.toggle('hidden', hasTopic);
+    }
   }
 
   if (topicTabs.length && topicPanels.length) {
     const params = new URLSearchParams(window.location.search);
-    const initialTopic = params.get('topic') || topicTabs[0].dataset.topic;
+    const initialTopic = params.get('topic');
 
     activateTopic(initialTopic);
 
