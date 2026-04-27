@@ -406,12 +406,31 @@ h2 {
   margin-top: 24px;
 }
 
+.topic-default-panel {
+  margin-top: 24px;
+}
+
+.topic-default-panel.hidden {
+  display: none;
+}
+
 .topic-panel {
   display: none;
 }
 
 .topic-panel.active {
   display: block;
+}
+
+.topic-intro-card {
+  margin-bottom: 16px;
+}
+
+.topic-intro {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.8;
+  font-weight: 600;
 }
 
 .plain-title {
@@ -958,5 +977,14 @@ h2 {
   .contact-card {
     padding: 16px 16px;
     border-radius: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  .research-detail-card,
+  .research-direction-card {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 18px 16px;
   }
 }
