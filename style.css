@@ -1009,8 +1009,9 @@ h2 {
 }
 
 .gallery-album {
-  border-top: 1px solid var(--border);
+  margin-top: 10px;
   padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
 
 .gallery-album + .gallery-album {
@@ -1108,12 +1109,23 @@ h2 {
   background: #ffffff;
 }
 
-.gallery-album[open] .gallery-album-cover {
-  display: none;
+.gallery-album[open] > summary .gallery-album-cover {
+  display: none !important;
 }
 
-.gallery-album[open] .gallery-album-summary {
-  gap: 8px;
+.gallery-album[open] > summary {
+  gap: 6px;
+}
+
+.gallery-album summary:focus {
+  outline: none;
+}
+
+.gallery-album summary,
+.gallery-album img,
+.gallery-album h3,
+.gallery-album p {
+  -webkit-tap-highlight-color: transparent;
 }
 
 @media (max-width: 840px) {
