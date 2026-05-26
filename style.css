@@ -986,7 +986,7 @@ h2 {
 }
 
 .gallery-page-head {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .gallery-intro {
@@ -1029,7 +1029,7 @@ h2 {
 .gallery-album-summary {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 10px;
   align-items: start;
   padding: 8px 0;
 }
@@ -1044,7 +1044,7 @@ h2 {
 
 .gallery-album-info h3 {
   margin: 0 0 6px;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   letter-spacing: -0.02em;
 }
 
@@ -1061,44 +1061,27 @@ h2 {
   border: 1px solid var(--border);
   background: #ffffff;
   box-shadow: 0 6px 18px rgba(2, 24, 67, 0.04);
-  max-width: 360px;
+  width: 260px;
+  max-width: 100%;
 }
 
 .gallery-album-cover img {
   width: 100%;
   height: auto;
-  max-height: 220px;
-  object-fit: contain;
   display: block;
+  object-fit: contain;
   background: #ffffff;
 }
 
-.gallery-album-meta {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.gallery-count {
-  display: inline-flex;
-  align-items: center;
-  padding: 7px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--accent);
-  font-weight: 600;
-  font-size: 0.88rem;
-}
-
 .gallery-album-body {
-  padding: 14px 0 0;
+  padding: 12px 0 0;
 }
 
 .gallery-album-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 12px;
-  max-width: 560px;
+  max-width: 260px;
 }
 
 .gallery-photo-card {
@@ -1120,9 +1103,8 @@ h2 {
 .gallery-photo-card img {
   width: 100%;
   height: auto;
-  max-height: 320px;
-  object-fit: contain;
   display: block;
+  object-fit: contain;
   background: #ffffff;
 }
 
@@ -1136,20 +1118,12 @@ h2 {
 
 @media (max-width: 840px) {
   .gallery-album-grid {
-    grid-template-columns: 1fr;
-    max-width: none;
+    max-width: 260px;
   }
 
   .gallery-album-cover {
-    max-width: none;
-  }
-
-  .gallery-album-cover img {
-    max-height: 180px;
-  }
-
-  .gallery-photo-card img {
-    max-height: 240px;
+    width: 260px;
+    max-width: 100%;
   }
 }
 
@@ -1160,11 +1134,9 @@ h2 {
     margin-right: 0.5rem;
   }
 
-  .gallery-album-cover img {
-    max-height: 160px;
-  }
-
-  .gallery-photo-card img {
-    max-height: 200px;
+  .gallery-album-cover,
+  .gallery-album-grid {
+    width: 100%;
+    max-width: 100%;
   }
 }
