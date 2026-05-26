@@ -1152,3 +1152,11 @@ h2 {
     height: 180px;
   }
 }
+
+.gallery-album[open] .gallery-album-cover {
+  display: none;
+}
+
+.gallery-album[open] .gallery-album-summary {
+  gap: 8px;
+}
