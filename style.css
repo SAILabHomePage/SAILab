@@ -113,10 +113,10 @@ button {
 }
 
 /* Hero */
-.hero {
-  padding: 72px 0 48px;
-  text-align: center;
-}
+.hero { position: relative; overflow: hidden; }      /* 영상을 hero 안에 가둠 */
+.hero .container { position: relative; z-index: 2; }  /* 글자를 영상 위로 */
+.hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero-scrim { /* 연한 베일 → 글자 가독성 + 가장자리 자연스럽게 */ }
 
 .eyebrow {
   margin: 0 auto 16px;
