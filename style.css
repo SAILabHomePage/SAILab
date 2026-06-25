@@ -230,7 +230,7 @@ h2 {
   margin-left: 1.5rem;
 }
 
-.interest-card {
+/*.interest-card {
   display: inline-flex;
   align-items: center;
   padding: 10px 18px;
@@ -242,12 +242,35 @@ h2 {
   letter-spacing: -0.01em;
   border-radius: 999px;
   transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}*/
+
+.interest-card {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, #f7dee0 0%, #ecd6e2 45%, #cdd9ec 100%);
+  color: #021843;
+  font-size: 1rem;              /* 0.9rem → 1rem, 살짝 키움 */
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: 999px;
+  box-shadow: 0 2px 6px rgba(2, 24, 67, 0.06);
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.interest-card:hover {
+/*.interest-card:hover {
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-1px);
+}*/
+
+.interest-card:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+  color: #021843;
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #f6d2d6 0%, #e6c9da 45%, #bccfe8 100%);
+  box-shadow: 0 4px 12px rgba(2, 24, 67, 0.12);
 }
 
 /* Home - Research Direction image cards */
@@ -433,10 +456,16 @@ h2 {
   background: rgba(2, 24, 67, 0.06);
 }
 
-.interest-card:active {
+/*.interest-card:active {
   border-color: var(--accent);
   color: var(--accent);
   background: rgba(2, 24, 67, 0.06);
+}*/
+
+.interest-card:active {
+  border-color: rgba(255, 255, 255, 0.9);
+  color: #021843;
+  background: linear-gradient(135deg, #efc6cc 0%, #ddbcd0 45%, #aec3e0 100%);
 }
 
 .topic-panels {
@@ -992,8 +1021,13 @@ h2 {
     line-height: 1.7;
   }
 
-  .interest-card {
+  /*.interest-card {
     font-size: 0.88rem;
+    padding: 9px 14px;
+  }*/
+
+    .interest-card {
+    font-size: 0.95rem;          /* 0.88rem → 0.95rem */
     padding: 9px 14px;
   }
 
