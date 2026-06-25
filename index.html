@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAILab | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css">
+  <link rel="icon" type="image/png" href="images/sailab_logo/sailab_logo.png">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -11,8 +16,11 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
-        <span class="brand-name">SAILab</span>
-        <span class="brand-tag">Scalable AI Lab</span>
+        <img class="brand-logo" src="images/sailab_logo/sailab_logo.png" alt="SAILab logo">
+        <span class="brand-text">
+          <span class="brand-name">SAILab</span>
+          <span class="brand-tag">Scalable AI Lab</span>
+        </span>
       </a>
       <nav class="site-nav">
         <a href="index.html" class="nav-link active">Home</a>
@@ -30,10 +38,27 @@
   
   <main>
     <section class="hero">
-      <div class="container">
-        <p class="eyebrow">From Principle to Practice</p>
-        <h1>Building General, Scalable, and Efficient AI</h1>
-        <p class="hero-text">SAILab explores AI research from theory to implementation. We develop models and systems that are general, scalable, efficient, and sustainable in academic settings.</p>
+      <div class="hero-waves" aria-hidden="true">
+        <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="wave-shape" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+          </defs>
+          <g class="wave-parallax">
+            <use href="#wave-shape" x="48" y="0" class="wave wave-1" />
+            <use href="#wave-shape" x="48" y="3" class="wave wave-2" />
+            <use href="#wave-shape" x="48" y="5" class="wave wave-3" />
+            <use href="#wave-shape" x="48" y="7" class="wave wave-4" />
+          </g>
+        </svg>
+      </div>
+      <div class="container hero-content">
+        <p class="eyebrow">Welcome aboard</p>
+        <h1>Let's navigate AI &mdash; from first principles to real systems.</h1>
+        <p class="hero-text">Hi there, and welcome! We're <strong>SAILab</strong>, a research group at Soongsil University exploring how AI works from the ground up &mdash; and how to make it general, scalable, and efficient enough to thrive in an academic lab. If you're a student who's curious about doing real AI research, you're exactly who this page is for. Take a look around, and feel free to say hello.</p>
+        <div class="hero-links">
+          <a href="research.html" class="hero-link primary">See what we research</a>
+          <a href="contact.html" class="hero-link">Come say hello</a>
+        </div>
       </div>
     </section>
 
