@@ -1268,3 +1268,13 @@ h2 {
     max-height: 360px;
   }
 }
+
+.alumni-list p {
+  margin: 0 0 8px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.alumni-list p:last-child {
+  margin-bottom: 0;
+}
