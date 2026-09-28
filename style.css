@@ -1734,3 +1734,22 @@ h2 {
     transform: none;
   }
 }
+
+/* ---------- 버튼을 배경 영상 밖(소개 아래)으로 ---------- */
+.hero-actions-bar {
+  padding: 28px 0 0;
+}
+
+.hero-actions-bar .hero-actions {
+  margin-top: 0;
+}
+
+.hero-actions-bar .btn-ghost {
+  background: var(--surface);
+}
+
+/* C2R 핵심 문구 굵게 */
+.hero-text .hero-key {
+  font-weight: 700;
+  color: var(--text);
+}
