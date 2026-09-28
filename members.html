@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAILab | People</title>
+  <title>SAIL | Scalable AI Lab, Soongsil University</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -14,17 +14,17 @@
         <span class="brand-name">SAILab</span>
         <span class="brand-tag">Scalable AI Lab</span>
       </a>
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="news.html" class="nav-link">News</a>
         <a href="research.html" class="nav-link">Research</a>
         <a href="publications.html" class="nav-link">Publications</a>
-        <a href="members.html" class="nav-link active">People</a>
+        <a href="members.html" class="nav-link active" aria-current="page">People</a>
         <a href="talks.html" class="nav-link">Talks &amp; Media</a>
         <a href="join.html" class="nav-link">Join Us</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -33,190 +33,260 @@
   <main>
     <section class="section">
       <div class="container">
-        <h1>Members</h1>
+        <h1>People</h1>
 
-        <div class="member-section-stack">
-          <div class="member-section-card">
+        <div class="people-stack">
+
+          <!-- ================= Professor ================= -->
+          <div class="member-section-card" id="professor">
             <h2>Professor</h2>
-            <div class="member-list">
-              <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/professorpicture.png" alt="Hyesong Choi">
-                </div>
-                <div class="member-info">
-                  <p class="member-name">Hyesong Choi (최혜송)</p>
-                  <p class="member-role">Professor</p>
-                  <p class="member-contact">E-mail: hyesong@ssu.ac.kr</p>
-                  <p class="member-contact">
-                    <a href="https://sites.google.com/view/hyesongchoi" target="_blank" rel="noopener">https://sites.google.com/view/hyesongchoi</a>
-                  </p>
+
+            <div class="pi-profile">
+              <div class="profile-photo pi-photo">
+                <img src="images/members/professorpicture.png" alt="Hyesong Choi">
+              </div>
+              <div class="pi-info">
+                <p class="member-name pi-full-name">Hyesong Choi (최혜송), Ph.D.</p>
+                <p class="pi-title">Assistant Professor, School of Electronic Engineering, Soongsil University (Sep. 2025 - Present)</p>
+                <p class="pi-title">Director, Scalable AI Lab (SAIL)</p>
+                <p class="pi-title">Affiliated faculty: Department of AI-Bio (Graduate School), Department of Next-Generation Semiconductor</p>
+                <div class="pi-buttons">
+                  <!-- CV 파일을 files/Hyesong_Choi_CV.pdf 로 올린 뒤 아래 줄의 주석 표시를 지우세요 -->
+                  <!-- <a class="pub-btn" href="files/Hyesong_Choi_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a> -->
+                  <a class="pub-btn" href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                  <a class="pub-btn" href="https://sites.google.com/view/hyesongchoi" target="_blank" rel="noopener noreferrer">Personal page</a>
+                  <a class="pub-btn" href="mailto:hyesong@ssu.ac.kr">E-mail: hyesong@ssu.ac.kr</a>
                 </div>
               </div>
             </div>
+
+            <p class="pi-bio">Hyesong Choi is an Assistant Professor in the School of Electronic Engineering at Soongsil University, where she directs the Scalable AI Lab (SAIL). She received her Ph.D. in Computer Science and Engineering from Ewha Womans University in August 2025 (Outstanding Dissertation Award, advisor: Prof. Dongbo Min) and joined Soongsil University as full-time faculty the following month. She was a research intern at NAVER AI Lab, a visiting researcher at the University of British Columbia (host: Prof. Kwang Moo Yi), and a visiting scholar at UIUC (host: Prof. James M. Rehg). Her research on efficient and trustworthy multimodal foundation models has appeared in 12 papers at CVPR, ICCV, ECCV, and NeurIPS, and is supported by the NRF Outstanding Early-Career Researcher Program.</p>
+
+            <h3 class="table-title">Experience</h3>
+            <div class="table-wrap">
+              <table class="data-table data-table--small">
+                <tbody>
+                  <tr><td>Sep. 2025 - Present</td><td>Assistant Professor, Soongsil University</td></tr>
+                  <tr><td>Jan. 2026 - Feb. 2026</td><td>Visiting Scholar, University of Illinois Urbana-Champaign (Host: Prof. James M. Rehg)</td></tr>
+                  <tr><td>Mar. 2025 - Aug. 2025</td><td>Research Intern, Backbone Research Group, NAVER AI Lab (Host: Dr. Dongyoon Han)</td></tr>
+                  <tr><td>Sep. 2024 - Aug. 2025</td><td>Instructor, Ewha Womans University</td></tr>
+                  <tr><td>Jul. 2024 - Sep. 2024</td><td>Visiting Researcher, University of British Columbia (Host: Prof. Kwang Moo Yi)</td></tr>
+                  <tr><td>Mar. 2024 - Feb. 2025</td><td>Adjunct Professor, Seoul Media Institute of Technology</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 class="table-title">Academic Services</h3>
+            <div class="table-wrap">
+              <table class="data-table data-table--small">
+                <tbody>
+                  <tr><td>Program Committee Member</td><td>AAAI 2027</td></tr>
+                  <tr><td>Conference Reviewer</td><td>CVPR 2022-2026; ICCV 2023, 2025; ECCV 2024, 2026; NeurIPS 2025, 2026; ICLR 2026, 2027</td></tr>
+                  <tr><td>Journal Reviewer</td><td>IJCV; Engineering Applications of Artificial Intelligence (EAAI)</td></tr>
+                  <tr><td>Board Member</td><td>International Conference on ICT Convergence (ICTC), Nov. 2025 - Present</td></tr>
+                  <tr><td>Expert Committee Member</td><td>Future Security Technology Forum (미래보안기술포럼), 2026 - Present</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div class="member-section-card">
+          <!-- ================= Students ================= -->
+          <div class="member-section-card" id="students">
             <h2>Students</h2>
-            <div class="member-list">
-              
+            <p class="member-count">Current members (Sep. 2026): 3 graduate students and 9 undergraduate researchers</p>
+
+            <!--
+              학생 한 명 형식:
+              - member-role: 구분 + 입실 시기 (예: Undergraduate researcher, since 2025.12)
+              - member-topic: 연구 주제 (없으면 줄 삭제)
+              - member-papers: 대표 논문 번호 (없으면 줄 삭제)
+              - member-links: Google Scholar / GitHub / 개인 홈페이지 (없으면 줄 삭제)
+            -->
+
+            <h3 class="member-group-title">Graduate Students</h3>
+            <div class="member-grid">
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/GoHyejin_p.jpg" alt="Hyejin Go">
-                </div>
+                <div class="profile-photo"><img src="images/members/GoHyejin_p.jpg" alt="Hyejin Go"></div>
                 <div class="member-info">
                   <p class="member-name">Hyejin Go (고혜진)</p>
-                  <p class="member-role">Student</p>
+                  <!-- 과정(M.S. / Ph.D. / 통합) 확인되면 "Graduate student"를 바꾸기 -->
+                  <p class="member-role">Graduate student, since 2026.09 (undergraduate researcher in SAIL before)</p>
+                  <p class="member-topic">Data selection for VLM pretraining; efficient vision transformers</p>
+                  <p class="member-papers">Papers: <a href="publications.html#paper-P15">P15</a>, <a href="publications.html#paper-P14">P14</a></p>
                   <p class="member-contact">E-mail: hyejin1612@soongsil.ac.kr</p>
-                  <p class="member-contact">26.09.01 ~</p>
                 </div>
               </div>
-              
+
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/KimSohee_p.png" alt="Sohee Kim">
-                </div>
+                <div class="profile-photo"><img src="images/members/KimSohee_p.png" alt="Sohee Kim"></div>
                 <div class="member-info">
                   <p class="member-name">Sohee Kim (김소희)</p>
-                  <p class="member-role">Student</p>
+                  <p class="member-role">Graduate student, since 2026.09 (undergraduate researcher in SAIL before). Lab manager</p>
+                  <p class="member-topic">AI-generated image detection; auditing LLM evidence</p>
+                  <p class="member-papers">Papers: <a href="publications.html#paper-P13">P13</a>, <a href="publications.html#paper-P10">P10</a></p>
                   <p class="member-contact">E-mail: soheekim624@daum.net</p>
-                  <p class="member-contact">26.09.01 ~</p>
                 </div>
               </div>
 
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/KimJihyeon_p.jpg" alt="Jihyeon Kim">
-                </div>
+                <div class="profile-photo"><img src="images/members/KimJihyeon_p.jpg" alt="Jihyeon Kim"></div>
                 <div class="member-info">
                   <p class="member-name">Jihyeon Kim (김지현)</p>
-                  <p class="member-role">Student</p>
+                  <p class="member-role">Graduate student, since 2026.09 (undergraduate researcher in SAIL before)</p>
+                  <p class="member-topic">Social AI; AI-generated image detection; auditing LLM evidence</p>
+                  <p class="member-papers">Papers: <a href="publications.html#paper-P13">P13</a>, <a href="publications.html#paper-P10">P10</a></p>
                   <p class="member-contact">E-mail: suri0323@naver.com</p>
-                  <p class="member-contact">26.09.01 ~</p>
                 </div>
               </div>
+            </div>
 
-
+            <h3 class="member-group-title">Undergraduate Researchers</h3>
+            <div class="member-grid">
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/LeeSemi_p.jpg" alt="Semi Lee">
-                </div>
+                <div class="profile-photo"><img src="images/members/LeeSemi_p.jpg" alt="Semi Lee"></div>
                 <div class="member-info">
                   <p class="member-name">Semi Lee (이세미)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
+                  <p class="member-topic">Token merging for efficient ViTs; data selection for VLMs</p>
+                  <p class="member-papers">Papers: <a href="publications.html#paper-P14">P14</a>, <a href="publications.html#paper-P15">P15</a></p>
                   <p class="member-contact">E-mail: seemi.tech@gmail.com</p>
                 </div>
               </div>
-              
+
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/OhSoyeon_p.jpg" alt="Soyeon Oh">
-                </div>
+                <div class="profile-photo"><img src="images/members/OhSoyeon_p.jpg" alt="Soyeon Oh"></div>
                 <div class="member-info">
                   <p class="member-name">Soyeon Oh (오소연)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
+                  <p class="member-topic">Reliability of LLM verifiers</p>
+                  <p class="member-papers">Papers: <a href="publications.html#paper-P11">P11</a></p>
                   <p class="member-contact">E-mail: soyeon260202@gmail.com</p>
                 </div>
               </div>
 
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/NamKaHyeon_p.jpg" alt="Kahyeon Nam">
-                </div>
+                <div class="profile-photo"><img src="images/members/NamKaHyeon_p.jpg" alt="Kahyeon Nam"></div>
                 <div class="member-info">
                   <p class="member-name">Kahyeon Nam (남가현)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
+                  <p class="member-topic">Quantization and early exit for CLIP (AI-semiconductor)</p>
+                  <p class="member-papers">Papers: <a href="publications.html#paper-P12">P12</a></p>
                   <p class="member-contact">E-mail: chloenam33@gmail.com</p>
                 </div>
               </div>
 
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/LeeSooSan_p.jpg" alt="Soosan Lee">
-                </div>
+                <div class="profile-photo"><img src="images/members/LeeSooSan_p.jpg" alt="Soosan Lee"></div>
                 <div class="member-info">
                   <p class="member-name">Soosan Lee (이수산)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
+                  <p class="member-topic">Deepfake detection; auditing of detectors</p>
+                  <p class="member-papers">Papers: <a href="publications.html#paper-P13">P13</a>, <a href="publications.html#paper-P9">P9</a></p>
                   <p class="member-contact">E-mail: susana0221@naver.com</p>
                 </div>
               </div>
 
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/KimYoonsu_p.jpg" alt="Yoonsu Kim">
-                </div>
+                <div class="profile-photo"><img src="images/members/KimYoonsu_p.jpg" alt="Yoonsu Kim"></div>
                 <div class="member-info">
                   <p class="member-name">Yoonsu Kim (김윤수)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
                   <p class="member-contact">E-mail: yoonsoo2005@gmail.com</p>
                 </div>
               </div>
 
-
-              
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/KimMinkyu_p.jpg" alt="Minkyu Kim">
-                </div>
+                <div class="profile-photo"><img src="images/members/KimMinkyu_p.jpg" alt="Minkyu Kim"></div>
                 <div class="member-info">
                   <p class="member-name">Minkyu Kim (김민규)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
                   <p class="member-contact">E-mail: kimminkyu762@gmail.com</p>
                 </div>
               </div>
 
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/ParkSehun_p.jpg" alt="Sehun Park">
-                </div>
+                <div class="profile-photo"><img src="images/members/ParkSehun_p.JPG" alt="Sehun Park"></div>
                 <div class="member-info">
                   <p class="member-name">Sehun Park (박세훈)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
                   <p class="member-contact">E-mail: psh6356424@naver.com</p>
                 </div>
               </div>
 
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/JinHojin_p.jpg" alt="Hojin Jin">
-                </div>
+                <div class="profile-photo"><img src="images/members/JinHojin_p.jpg" alt="Hojin Jin"></div>
                 <div class="member-info">
                   <p class="member-name">Hojin Jin (진호진)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
                   <p class="member-contact">E-mail: alexjin9@naver.com</p>
                 </div>
               </div>
 
               <div class="member-item">
-                <div class="profile-photo">
-                  <img src="images/members/JungJunha_p.jpg" alt="Junha Jung">
-                </div>
+                <div class="profile-photo"><img src="images/members/JungJunha_p.jpg" alt="Junha Jung"></div>
                 <div class="member-info">
                   <p class="member-name">Junha Jung (정준하)</p>
-                  <p class="member-role">Undergraduate Student</p>
+                  <p class="member-role">Undergraduate researcher</p>
                   <p class="member-contact">E-mail: unha495@gmail.com</p>
                 </div>
               </div>
-              
             </div>
           </div>
-          
-          <div class="member-section-card">
-            <h2>Alumni</h2>
-            <div class="alumni-list">
-              <p>Sungjun Kim (김성준)</p>
-              <p>Taehyung Roh (노태형)</p>
+
+          <!-- ================= Alumni ================= -->
+          <div class="member-section-card" id="alumni">
+            <h2>Alumni and Former Members</h2>
+            <!-- 앞으로 나가는 학생은 항상 "→ now at (회사/대학원)"을 적기. 재적 기간(예: 2025.09 - 2026.02)은 확인되면 추가 -->
+            <div class="table-wrap">
+              <table class="data-table data-table--small">
+                <tbody>
+                  <tr><td>Sungjun Kim (김성준)</td><td>Former undergraduate researcher → now at SK hynix</td></tr>
+                  <tr><td>Taehyung Roh (노태형)</td><td>Former undergraduate researcher (Soongsil University)</td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
+
+          <!-- ================= Teaching ================= -->
+          <div class="member-section-card" id="teaching">
+            <h2>Teaching</h2>
+            <div class="table-wrap">
+              <table class="data-table data-table--small">
+                <thead>
+                  <tr><th scope="col">Semester</th><th scope="col">Course</th><th scope="col">Level (enrollment)</th><th scope="col">Department</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Fall 2026</td><td>Machine Learning</td><td>Undergraduate (50)</td><td>Electronic Engineering</td></tr>
+                  <tr><td>Fall 2026</td><td>Advanced Programming</td><td>Undergraduate (39)</td><td>Electronic Engineering</td></tr>
+                  <tr><td>Fall 2026</td><td>AI Research Seminar</td><td>Graduate (12)</td><td>Electronic Engineering</td></tr>
+                  <tr><td>Fall 2026</td><td>Bio Deep Learning</td><td>Graduate (9)</td><td>AI-Bio</td></tr>
+                  <tr><td>Spring 2026</td><td>Artificial Neural Networks</td><td>Undergraduate (39)</td><td>Electronic Engineering</td></tr>
+                  <tr><td>Spring 2026</td><td>Multimedia Convergence Technology</td><td>Undergraduate (38)</td><td>Electronic Engineering</td></tr>
+                  <tr><td>Spring 2026</td><td>Bio Machine Learning</td><td>Graduate (13)</td><td>AI-Bio</td></tr>
+                  <tr><td>Fall 2025</td><td>Advanced Programming</td><td>Undergraduate (40)</td><td>Electronic Engineering</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- ================= Gallery 링크 ================= -->
+          <a class="gallery-link-card" href="gallery.html">
+            <span class="gallery-link-title">Gallery</span>
+            <span class="gallery-link-desc">Photos from lab events, conferences, and seminars</span>
+          </a>
 
         </div>
-
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>SAILab · Scalable AI Lab</p>
+      <p>Scalable AI Lab (SAIL), School of Electronic Engineering, Soongsil University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a>
+      </div>
     </div>
   </footer>
 </body>
