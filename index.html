@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAILab | Home</title>
+  <title>SAIL | Scalable AI Lab, Soongsil University</title>
+  <meta name="description" content="Scalable AI Lab (SAIL) at Soongsil University builds efficient and trustworthy multimodal foundation models.">
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -14,194 +15,113 @@
         <span class="brand-name">SAILab</span>
         <span class="brand-tag">Scalable AI Lab</span>
       </a>
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="members.html" class="nav-link">Members</a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+        <a href="news.html" class="nav-link">News</a>
         <a href="research.html" class="nav-link">Research</a>
         <a href="publications.html" class="nav-link">Publications</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="members.html" class="nav-link">People</a>
+        <a href="talks.html" class="nav-link">Talks &amp; Media</a>
+        <a href="join.html" class="nav-link">Join Us</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-
-  
   <main>
+    <!-- 1. 연구실 소개 -->
     <section class="hero">
-  <div class="hero-media" aria-hidden="true">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/hero-water-poster.jpg">
-      <source src="images/hero-water.webm" type="video/webm">
-      <source src="images/hero-water.mp4" type="video/mp4">
-    </video>
-    <div class="hero-scrim"></div>
-  </div>
-  <div class="container">   <!-- 원래 줄 그대로 -->
-        <p class="eyebrow">From Principle to Practice</p>
-        <h1>Building General, Scalable, and Efficient AI</h1>
-        <p class="hero-text">SAILab explores AI research from theory to implementation. We develop models and systems that are general, scalable, efficient, and sustainable in academic settings.</p>
+      <div class="hero-media" aria-hidden="true">
+        <!-- 배경 영상: 교수님이 연구 그림을 주시면 교체 -->
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/hero-water-poster.jpg">
+          <source src="images/hero-water.webm" type="video/webm">
+          <source src="images/hero-water.mp4" type="video/mp4">
+        </video>
+        <div class="hero-scrim"></div>
       </div>
-    </section>
-
-
-    
-    <section class="section">
       <div class="container">
-    
-        <h2>Research Interest</h2>
-        <div class="interest-grid">
-          <a href="research.html?topic=vlms#research-interest" class="interest-card">VLMs</a>
-          <a href="research.html?topic=ai-security#research-interest" class="interest-card">AI Security</a>
-          <a href="research.html?topic=data-filtering#research-interest" class="interest-card">Data Filtering</a>
-          <a href="research.html?topic=social-ai#research-interest" class="interest-card">Social AI</a>
-          <a href="research.html?topic=reinforcement-learning#research-interest" class="interest-card">Reinforcement Learning</a>
-          <a href="research.html?topic=autonomous-driving#research-interest" class="interest-card">Autonomous Driving</a>
-          <a href="research.html?topic=diffusion-models#research-interest" class="interest-card">Diffusion Models</a>
+        <p class="eyebrow">Scalable AI Lab (SAIL) · Soongsil University · PI: Prof. Hyesong Choi</p>
+        <h1>Efficient and Trustworthy Multimodal Foundation Models</h1>
+        <p class="hero-sub">From Visual Perception to Physical AI</p>
+        <p class="hero-text">We build vision-language and multimodal foundation models that are efficient to train, reliable to deploy, and ready to move from the screen into the physical world. Our core idea is Corruption-to-Reconstruction (C2R): corrupting what a model sees (masking, noise, embedding perturbation) and learning to restore it yields stronger representations with less compute and less data.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a class="btn btn-ghost" href="publications.html">Publications</a>
+          <a class="btn btn-primary" href="join.html">Join Us</a>
         </div>
-
-
-        
-        <h2 class="direction-title">Research Direction</h2>
-        <div class="direction-visual-grid">
-          <div class="direction-visual-card">
-            <img src="images/RD/ai-principles.png" alt="AI Principles">
-            <div class="direction-visual-overlay"></div>
-            <div class="direction-visual-content">
-              <h3>AI Principles</h3>
-            </div>
-          </div>
-
-          <div class="direction-visual-card">
-            <img src="images/RD/scalability-efficiency.png" alt="Scalability &amp; Efficiency">
-            <div class="direction-visual-overlay"></div>
-            <div class="direction-visual-content">
-              <h3>Scalability &amp; Efficiency</h3>
-            </div>
-          </div>
-
-          <div class="direction-visual-card">
-            <img src="images/RD/generalization.png" alt="Generalization">
-            <div class="direction-visual-overlay"></div>
-            <div class="direction-visual-content">
-              <h3>Generalization</h3>
-            </div>
-          </div>
-
-          <div class="direction-visual-card">
-            <img src="images/RD/foundation-model.png" alt="Foundation Model">
-            <div class="direction-visual-overlay"></div>
-            <div class="direction-visual-content">
-              <h3>Foundation Model</h3>
-            </div>
-          </div>
-
-          <div class="direction-visual-card">
-            <img src="images/RD/academic-sustainability.png" alt="Academic Sustainability">
-            <div class="direction-visual-overlay"></div>
-            <div class="direction-visual-content">
-              <h3>Academic Sustainability</h3>
-            </div>
-          </div>
       </div>
     </section>
 
-    
-    
-    <section class="section">
+    <!-- 2. News (최신 8개) -->
+    <section class="home-section home-section--first" aria-labelledby="news-title">
       <div class="container">
-        <h2>News</h2>
-        <div class="news-list">
-          <div class="news-year-group">
-            <h3>2026</h3>
+        <div class="section-head">
+          <h2 id="news-title">News</h2>
+          <a class="text-link" href="news.html">See all news</a>
+        </div>
+        <div class="news-upcoming" data-render="upcoming"></div>
+        <ul class="news-feed" data-render="news" data-limit="8"></ul>
+      </div>
+    </section>
 
-            <div class="news-item">
-                <div class="news-date">2026.05</div>
-                <div class="news-title">
-                  Awarded a research project on AI–semiconductor convergence, funded by the COSS Next-Generation Semiconductor Innovation Convergence University Program. (Project Lead)
-                </div>
-            </div>
+    <!-- 3. Recent Papers by Research Area -->
+    <section class="home-section" aria-labelledby="areas-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="areas-title">Recent Papers by Research Area</h2>
+        </div>
+        <div class="area-grid" data-render="area-cards"></div>
+      </div>
+    </section>
 
-            <div class="news-item">
-                <div class="news-date">2026.05</div>
-                <div class="news-title">
-                  Awarded a research project on safe and trustworthy AI agents, funded by the National Research Foundation of Korea (NRF).
-                </div>
-            </div>
-
-            <div class="news-item">
-                <div class="news-date">2026.04</div>
-                <div class="news-title">
-                  Awarded a research project on Agentic AI, funded by the National Security Research Institute (NSR, 국가보안기술연구소). (PI)
-                </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-date">2026.03</div>
-              <div class="news-title">
-                Granted the NRF Outstanding Early-Career Researcher Program (우수신진연구), funded by the National Research Foundation of Korea (NRF). (PI)
-              </div>
-            </div>
-
-            <div class="news-item">
-                <div class="news-date">2026.01</div>
-                <div class="news-title">CLDA is accepted at ICASSP 2026.</div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-date">2026.01</div>
-              <div class="news-title">
-                Prof. Hyesong Choi will visit UIUC for two months to conduct collaborative research on Social AI and deepfake detection with Prof. Jim Rehg’s group.
-              </div>
-            </div>
+    <!-- 4. Highlights -->
+    <section class="home-section" aria-labelledby="highlights-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="highlights-title">Highlights</h2>
+        </div>
+        <div class="highlights">
+          <div class="highlight">
+            <span class="highlight-num">12</span>
+            <span class="highlight-label">papers at CVPR / ICCV / ECCV / NeurIPS</span>
           </div>
-
-          <div class="news-year-group">
-            <h3>2025</h3>
-
-            <div class="news-item">
-              <div class="news-date">2025.12</div>
-              <div class="news-title">RobIA is accepted at NeurIPS 2025.</div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-date">2025.11</div>
-              <div class="news-title">
-                Prof. Hyesong Choi has been appointed as a Board Member (학회 이사) of the International Conference on ICT Convergence (ICTC).
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-date">2025.09</div>
-              <div class="news-title">
-                Prof. Hyesong Choi joins Soongsil University as an Assistant Professor in the School of Electrical Engineering.
-              </div>
-              <div class="news-related">
-                <a href="https://myr.ewha.ac.kr/cse/student/news.do?mode=view&articleNo=758552&title=%EC%B5%9C%ED%98%9C%EC%86%A1+%EC%84%9D%EB%B0%95%EC%82%AC%ED%86%B5%ED%95%A9%EA%B3%BC%EC%A0%95%EC%83%9D%2C+%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90+%EC%A0%84%EC%9E%90%EC%A0%95%EB%B3%B4%EA%B3%B5%ED%95%99%EB%B6%80+%EC%A0%84%EC%9E%84%EA%B5%90%EC%9B%90+%EC%9E%84%EC%9A%A9" target="_blank" rel="noopener noreferrer">Related Article 1</a> /
-                <a href="https://www.kyosu.net/news/articleView.html?idxno=142177" target="_blank" rel="noopener noreferrer">Related Article 2</a> /
-                <a href="https://www.eduplusnews.com/news/articleView.html?idxno=15833" target="_blank" rel="noopener noreferrer">Related Article 3</a> /
-                <a href="https://edu.donga.com/news/articleView.html?idxno=94114" target="_blank" rel="noopener noreferrer">Related Article 4</a>
-              </div>
-            </div>
-
-            <div class="news-item">
-              <div class="news-date">2025.08</div>
-              <div class="news-title">
-                Prof. Hyesong Choi received her Ph.D. in Computer Science and Engineering from Ewha Womans University, with a research focus on large-scale model pre-training, and was awarded the Outstanding Dissertation Award (Graduate School-wide).
-              </div>
-            </div>
+          <div class="highlight">
+            <span class="highlight-num">3</span>
+            <span class="highlight-label">papers at ECCV 2026 (with Meta, NAVER AI Lab, UBC)</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-num">7</span>
+            <span class="highlight-label">research grants as PI in the first year</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-num">7</span>
+            <span class="highlight-label">student-led papers submitted in the lab's first year</span>
           </div>
         </div>
       </div>
     </section>
 
-
-    
+    <!-- 5. Join Us -->
+    <section class="home-section home-section--last" aria-label="Join Us">
+      <div class="container">
+        <div class="join-band">
+          <p>We are looking for motivated M.S./Ph.D. students and undergraduate researchers.</p>
+          <a class="btn btn-primary" href="join.html">Join Us</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>SAILab · Scalable AI Lab</p>
+      <p>Scalable AI Lab (SAIL), School of Electronic Engineering, Soongsil University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a>
+      </div>
     </div>
   </footer>
 </body>
