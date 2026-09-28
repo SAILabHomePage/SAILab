@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAIL | Scalable AI Lab, Soongsil University</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-name">SAILab</span>
+        <span class="brand-tag">Scalable AI Lab</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="news.html" class="nav-link active" aria-current="page">News</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="members.html" class="nav-link">People</a>
+        <a href="talks.html" class="nav-link">Talks &amp; Media</a>
+        <a href="join.html" class="nav-link">Join Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>News</h1>
+
+        <!-- 내용은 script.js 윗부분의 news / upcoming 데이터에서 자동으로 채워집니다 -->
+        <div class="news-upcoming" data-render="upcoming"></div>
+        <div data-render="news-archive"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Scalable AI Lab (SAIL), School of Electronic Engineering, Soongsil University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
