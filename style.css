@@ -1278,3 +1278,459 @@ h2 {
 .alumni-list p:last-child {
   margin-bottom: 0;
 }
+
+/* =========================================================
+   SAIL 리뉴얼 스타일 — style.css 다음에 불러옵니다.
+   기존 디자인(색, 카드, 그림자)을 그대로 따릅니다.
+   ========================================================= */
+
+/* ---------- Hero (소개) ---------- */
+.hero {
+  padding: 56px 0 44px;
+}
+
+.hero .eyebrow {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  max-width: 920px;
+}
+
+.hero .hero-sub {
+  margin: 14px auto 0;
+  font-size: clamp(1.08rem, 1.7vw, 1.3rem);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hero .hero-text {
+  margin: 18px auto 0;
+  max-width: 720px;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #4d5263;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+/* ---------- 버튼 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #0a2a66;
+  box-shadow: 0 6px 16px rgba(2, 24, 67, 0.18);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--accent);
+}
+
+.btn-ghost:hover {
+  background: #ffffff;
+}
+
+.btn:focus-visible,
+.area-card:focus-visible,
+.news-links a:focus-visible,
+.site-footer a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Home 섹션 공통 ---------- */
+.home-section {
+  padding: 56px 0 8px;
+}
+
+.home-section--first {
+  padding-top: 32px;
+}
+
+.home-section--last {
+  padding-bottom: 72px;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.section-head h2 {
+  margin: 0;
+}
+
+.section-head .text-link {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.section-head .text-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 분류 배지 (News) ---------- */
+.badge {
+  display: inline-block;
+  justify-self: start;
+  padding: 1px 10px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+
+.badge--paper   { background: #e1e9fb; color: #1e3a8a; }
+.badge--grant   { background: #dcf1e4; color: #14532d; }
+.badge--talk    { background: #ece3f8; color: #5b21b6; }
+.badge--service { background: #fbeed3; color: #7a4705; }
+.badge--media   { background: #fbe1e6; color: #9f1239; }
+.badge--plain   { background: #e9ecf1; color: #4b5263; }
+
+/* ---------- News ---------- */
+.news-upcoming {
+  margin-bottom: 14px;
+  padding: 14px 20px 6px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.news-upcoming-title {
+  margin: 0 0 2px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.news-upcoming-list,
+.news-feed {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-feed {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
+}
+
+.news-row {
+  display: grid;
+  grid-template-columns: 72px 76px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 22px;
+}
+
+.news-feed .news-row + .news-row {
+  border-top: 1px solid var(--border);
+}
+
+.news-upcoming .news-row {
+  padding: 8px 0;
+}
+
+.news-row-date {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.news-row-text {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.news-row.is-star .news-row-text {
+  font-weight: 700;
+}
+
+.news-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+/* ---------- Recent Papers by Research Area ---------- */
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.area-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.area-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(2, 24, 67, 0.22);
+  box-shadow: 0 14px 28px rgba(2, 24, 67, 0.1);
+}
+
+.area-card .area-name {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.area-card .area-desc {
+  margin: 6px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.area-papers {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.area-paper {
+  display: grid;
+  gap: 4px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border);
+}
+
+.area-paper-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+.area-paper-authors {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.area-more {
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.area-card:hover .area-more {
+  text-decoration: underline;
+}
+
+/* 학회 배지 (Publications에서도 사용) */
+.venue {
+  justify-self: start;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.8;
+  background: #e9ecf1;
+  color: #4b5263;
+}
+
+.venue--top {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* 저자 표기 규칙 */
+.pi-name {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sail-student {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ---------- Highlights ---------- */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(2, 24, 67, 0.05);
+}
+
+.highlight {
+  padding: 24px 22px;
+}
+
+.highlight + .highlight {
+  border-left: 1px solid var(--border);
+}
+
+.highlight-num {
+  display: block;
+  font-size: clamp(2.2rem, 4vw, 2.9rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+}
+
+.highlight-label {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* ---------- Join Us 한 줄 ---------- */
+.join-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f7dee0 0%, #ecd6e2 45%, #cdd9ec 100%);
+}
+
+.join-band p {
+  margin: 0;
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--accent);
+}
+
+.join-band .btn {
+  flex-shrink: 0;
+}
+
+/* ---------- Footer ---------- */
+.footer-inner p {
+  margin: 0 0 4px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 6px;
+}
+
+.footer-links a {
+  color: var(--accent);
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 반응형 ---------- */
+@media (max-width: 960px) {
+  .area-grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+
+  .highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .highlight:nth-child(3) {
+    border-left: none;
+  }
+
+  .highlight:nth-child(n + 3) {
+    border-top: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 560px) {
+  .hero {
+    padding: 40px 0 40px;
+  }
+
+  .news-row {
+    grid-template-columns: auto 1fr;
+    gap: 6px 10px;
+    padding: 14px 16px;
+  }
+
+  .news-row-text {
+    grid-column: 1 / -1;
+  }
+
+  .join-band {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 20px;
+  }
+
+  .highlight {
+    padding: 20px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .area-card,
+  .btn {
+    transition: none;
+  }
+
+  .area-card:hover {
+    transform: none;
+  }
+}
