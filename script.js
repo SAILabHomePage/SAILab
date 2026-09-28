@@ -1,4 +1,3 @@
-
 window.SAIL_DATA = {
 
   /* ---------- 기사 링크 모음 (지시문 마지막 표) ----------
@@ -406,13 +405,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- 논문 목록: <ul data-papers="C14, C13, ..."> ----------
      HTML에 적은 번호 순서대로 논문 카드를 그립니다. (Research, Publications 공용) */
-  function pubItem(p) {
-    const url = p.links && p.links.paper;
+  const PUB_BUTTONS = [['paper', 'Paper'], ['code', 'Code'], ['project', 'Project']];
+
+  function pubItem(p, withButtons) {
+    const links = p.links || {};
     const title = '[' + esc(p.id) + '] ' + esc(p.title);
-    const head = url
-      ? '<a class="publication-title" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + title + '</a>'
+    const head = links.paper
+      ? '<a class="publication-title" href="' + esc(links.paper) + '" target="_blank" rel="noopener noreferrer">' + title + '</a>'
       : '<span class="publication-title no-link">' + title + '</span>';
+    // [Paper] [Code] [Project] 버튼: 링크가 있는 것만 표시
+    const buttons = withButtons
+      ? PUB_BUTTONS.filter(([key]) => links[key]).map(([key, label]) =>
+          '<a class="pub-btn" href="' + esc(links[key]) + '" target="_blank" rel="noopener noreferrer">' + label + '</a>'
+        ).join('')
+      : '';
     return '<li class="publication-item" id="paper-' + esc(p.id) + '">' + head +
+      (buttons ? '<div class="pub-actions">' + buttons + '</div>' : '') +
       '<p class="publication-meta">' + formatAuthors(p.authors) + '</p>' +
       '<div class="pub-venue">' +
         '<span class="venue' + (p.top ? ' venue--top' : '') + '">' + esc(p.tag) + '</span>' +
@@ -420,6 +428,14 @@ document.addEventListener('DOMContentLoaded', function () {
         (p.note ? '<span class="pub-note">' + esc(p.note) + '</span>' : '') +
       '</div></li>';
   }
+
+  /* Publications 페이지: <ul data-pub-group="conf"> → 그 묶음 논문 전체 (데이터 순서대로) */
+  document.querySelectorAll('[data-pub-group]').forEach((list) => {
+    const group = list.dataset.pubGroup;
+    list.innerHTML = (DATA.publications || [])
+      .filter((p) => p.group === group && !p.pending)
+      .map((p) => pubItem(p, true)).join('');
+  });
 
   document.querySelectorAll('[data-papers]').forEach((list) => {
     const ids = list.dataset.papers.split(',').map((x) => x.trim()).filter(Boolean);
