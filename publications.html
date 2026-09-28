@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAILab | Publications</title>
+  <title>SAIL | Scalable AI Lab, Soongsil University</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -14,146 +14,79 @@
         <span class="brand-name">SAILab</span>
         <span class="brand-tag">Scalable AI Lab</span>
       </a>
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="news.html" class="nav-link">News</a>
         <a href="research.html" class="nav-link">Research</a>
-        <a href="publications.html" class="nav-link activate">Publications</a>
+        <a href="publications.html" class="nav-link active" aria-current="page">Publications</a>
         <a href="members.html" class="nav-link">People</a>
         <a href="talks.html" class="nav-link">Talks &amp; Media</a>
         <a href="join.html" class="nav-link">Join Us</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main>
-    <section class="section publications-section">
+    <section class="section">
       <div class="container">
         <h1>Publications</h1>
 
-        <h2>Conference Publication (International)</h2>
-        <ul class="publication-list">
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/pdf/2409.02699" target="_blank" rel="noopener noreferrer">[C11] CLDA: Collaborative Learning for Unsupervised Enhanced Domain Adaptation</a>
-            <p class="publication-meta">Minhee Cho, Hyesong Choi, Hayeon Jo, and Dongbo Min · IEEE ICASSP, 2026</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/abs/2511.10107" target="_blank" rel="noopener noreferrer">[C10] RobIA: Robust Instance-aware Continual Test-time Adaptation for Deep Stereo</a>
-            <p class="publication-meta">Jueun Ko, Hyewon Park, Hyesong Choi, and Dongbo Min · NeurIPS, 2025</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/pdf/2501.04293" target="_blank" rel="noopener noreferrer">[C9] TADFormer: Task-Adaptive Dynamic TransFormer for Efficient Multi-Task Learning</a>
-            <p class="publication-meta">Seungmin Baek, Soyul Lee, Hayeon Jo, Hyesong Choi, and Dongbo Min · IEEE CVPR, 2025</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://openreview.net/pdf?id=0AumdfLzpK" target="_blank" rel="noopener noreferrer">[C8] A Simple Framework for Generalization in Visual RL under Dynamic Scene Perturbations</a>
-            <p class="publication-meta">Wonil Song, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min · NeurIPS, 2024</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/pdf/2404.08327" target="_blank" rel="noopener noreferrer">[C7] Salience-Based Adaptive Masking: Revisiting Token Dynamics for Enhanced Pre-training</a>
-            <p class="publication-meta">Hyesong Choi, Hyejin Park, Kwang Moo Yi, Sungmin Cha, and Dongbo Min · ECCV, 2024</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/pdf/2404.08330" target="_blank" rel="noopener noreferrer">[C6] Emerging Property of Masked TOken for Effective Pre-training</a>
-            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Seyoung Joung, Hyejin Park, Jiyeong Kim, and Dongbo Min · ECCV, 2024</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choi_Environment_Agnostic_Representation_for_Visual_Reinforcement_Learning_ICCV_2023_paper.pdf" target="_blank" rel="noopener noreferrer">[C5] Environment Agnostic Representation for Visual Reinforcement Learning</a>
-            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Seongwon Jeong, and Dongbo Min · IEEE ICCV, 2023</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Choi_Local-Guided_Global_Paired_Similarity_Representation_for_Visual_Reinforcement_Learning_CVPR_2023_paper.pdf" target="_blank" rel="noopener noreferrer">[C4] Local-Guided Global: Paired Similarity Representation for Visual Reinforcement Learning</a>
-            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Wonil Song, Sangryul Jeon, Kwanghoon Sohn, and Dongbo Min · IEEE CVPR, 2023</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://openaccess.thecvf.com/content/CVPR2022/papers/Lee_KNN_Local_Attention_for_Image_Restoration_CVPR_2022_paper.pdf" target="_blank" rel="noopener noreferrer">[C3] KNN Local Attention for Image Restoration</a>
-            <p class="publication-meta">Hunsang Lee, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min · IEEE CVPR, 2022</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/pdf/2209.02518" target="_blank" rel="noopener noreferrer">[C2] Sequential Cross Attention Based Multi-Task Learning</a>
-            <p class="publication-meta">Sunkyung Kim, Hyesong Choi, and Dongbo Min · IEEE ICIP, 2022</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Adaptive_Confidence_Thresholding_for_Monocular_Depth_Estimation_ICCV_2021_paper.pdf" target="_blank" rel="noopener noreferrer">[C1] Adaptive Confidence Thresholding for Monocular Depth Estimation</a>
-            <p class="publication-meta">Hyesong Choi, Hunsang Lee, Sunok Kim, Seungryoung Kim, and Dongbo Min · IEEE ICCV, 2021</p>
-          </li>
-        </ul>
+        <!-- 안내문 (지시문 문장 그대로, 표기 규칙 부분만 실제 모양으로 보여줌) -->
+        <div class="pub-notice">
+          CVPR, ICCV, and ECCV are the three premier conferences in computer vision; NeurIPS and ICLR are the premier conferences in machine learning. 12 papers at these venues, 7 as first author. <strong class="pi-name">Hyesong Choi</strong> in bold; † corresponding author; * equal contribution; <u class="sail-student">underlined</u>: student advised at SAIL.
+        </div>
 
-        <h2 class="journal-heading">Journal Publication (International)</h2>
-        <ul class="publication-list">
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/pdf/2409.02545" target="_blank" rel="noopener noreferrer">[J5] UniTT-Stereo: Unified Training of Transformer for Enhanced Stereo Matching</a>
-            <p class="publication-meta">Soomin Kim, Hyesong Choi, Jihye Ahn, and Dongbo Min · IEEE ACCESS (IF=3.476), 2025</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11018413" target="_blank" rel="noopener noreferrer">[J4] Global Structural Knowledge Distillation for Semantic Segmentation</a>
-            <p class="publication-meta">Hyejin Park, Keonhee Ahn, Hyesong Choi, and Dongbo Min · IEEE ACCESS (IF=3.476), 2025</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://arxiv.org/pdf/2409.02846" target="_blank" rel="noopener noreferrer">[J3] MaDis-Stereo: Enhanced Stereo Matching via Distilled Masked Image Modeling</a>
-            <p class="publication-meta">Jihye Ahn, Hyesong Choi, Sommin Kim, and Dongbo Min · IEEE ACCESS (IF=3.476), 2025</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10036436" target="_blank" rel="noopener noreferrer">[J2] Cross-Scale KNN Image Transformer for Image Restoration</a>
-            <p class="publication-meta">Hunsang Lee, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min · IEEE ACCESS (IF=3.476), 2023</p>
-          </li>
-          <li class="publication-item">
-            <a class="publication-title" href="https://www.sciencedirect.com/science/article/abs/pii/S0957417423011272" target="_blank" rel="noopener noreferrer">[J1] Learning Disentangled Skills for Hierarchical Reinforcement Learning through Trajectory Autoencoder with Weak Labels</a>
-            <p class="publication-meta">Wonil Song, Sangryul Jeon, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min · Expert Systems with Applications (ESWA) (IF=7.5), 2023</p>
-          </li>
-        </ul>
+        <!--
+          목록은 script.js 윗부분의 publications 데이터에서 자동으로 채워집니다.
+          새 논문은 데이터에 추가만 하면 group 값에 맞는 묶음에 나옵니다.
+          conf = Conference / journal = Journal / workshop = Workshop and Poster
+          student = 학생 주도 묶음 / collab = First-author and collaborative work
+        -->
 
-        <h2>Preprint</h2>
+        <section class="pub-section" id="conference">
+          <h2>Conference</h2>
+          <ul class="publication-list" data-pub-group="conf"></ul>
+        </section>
 
-        <ul class="publication-list">
-          <li class="publication-item">
-            <a href="https://arxiv.org/pdf/2605.22651" target="_blank" rel="noopener" class="publication-title">
-              [P4] What Does the Caption Really Say? Counterfactual Phrase Intervention for Compositional Data Selection in Vision-Language Pretraining
-            </a>
-            <p class="publication-meta">
-              Hyejin Go, Semi Lee, and Hyesong Choi · arXiv preprint, 2026
-            </p>
-          </li>
+        <section class="pub-section" id="journal">
+          <h2>Journal</h2>
+          <ul class="publication-list" data-pub-group="journal"></ul>
+        </section>
 
-          <li class="publication-item">
-            <span class="publication-title plain-title">
-              <a href="https://arxiv.org/abs/2605.27465" target="_blank" rel="noopener" class="publication-title">
-                [P3] AdaMerge: Salience-Aware Adaptive Token Merging for Training-Free Acceleration of Vision Transformers
-            </a>
-            <p class="publication-meta">
-              Semi Lee, Hyejin Go, Hyesong Choi · arXiv preprint, 2026
-            </p>
-          </li>
+        <section class="pub-section" id="workshop">
+          <h2>Workshop and Poster (AI Security)</h2>
+          <ul class="publication-list" data-pub-group="workshop"></ul>
+        </section>
 
-          <li class="publication-item">
-            <a href="https://arxiv.org/abs/2605.27348" target="_blank" rel="noopener" class="publication-title">
-              [P2] When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection
-            </a>
-            <p class="publication-meta">
-              Jihyeon Kim, Sohee Kim, Soosan Lee, Souhwan Jung, James Matthew Rehg, Hyesong Choi· arXiv preprint, 2026
-            </p>
-          </li>
+        <section class="pub-section" id="preprints">
+          <h2>Manuscripts under Review and Preprints</h2>
 
-          <li class="publication-item">
-            <a href="http://arxiv.org/abs/2605.26415" target="_blank" rel="noopener" class="publication-title">
-              [P1] The Rescue Effect: Spatio-Semantic Early Exit Bypasses Quantization Collapse in CLIP
-            </a>
-            <p class="publication-meta">
-              Kahyeon Nam, Hyesong Choi · arXiv preprint, 2026
-            </p>
-          </li>
+          <div class="pub-group">
+            <h3>Student-led papers from SAIL (corresponding author: Hyesong Choi)</h3>
+            <p class="pub-group-desc">All student authors below began these projects as undergraduate researchers in SAIL.</p>
+            <ul class="publication-list" data-pub-group="student"></ul>
+          </div>
 
-          
-        </ul>
+          <div class="pub-group">
+            <h3>First-author and collaborative work</h3>
+            <ul class="publication-list" data-pub-group="collab"></ul>
+          </div>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>SAILab · Scalable AI Lab</p>
+      <p>Scalable AI Lab (SAIL), School of Electronic Engineering, Soongsil University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a>
+      </div>
     </div>
   </footer>
 </body>
