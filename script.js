@@ -220,7 +220,7 @@ window.SAIL_DATA = {
       title: "When Recovery Fails Open: A Controlled Study of Execution-Layer Attack Surfaces in Browser Agents",
       authors: "Soobin Yim, ChanHyeok Lim, Thien-Phuc Doan, Hyesong Choi, and Souhwan Jung",
       venue: "AGENT-SEC 2026 (ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems)" },
-    { id: "W1", group: "workshop", tag: "WISA", year: 2026, area: "3-B", pendingTitle: true,
+    { id: "W1", group: "workshop", tag: "WISA", year: 2026, area: "3-B", pending: true, // 제목 받으면 pending 지우기
       title: "(Poster title to be confirmed)", // 교수님께 제목 받기
       authors: "Jina Kang, Jeong-Han Yun, and Hyesong Choi\u2020",
       venue: "WISA 2026, Poster Session, Jeju, Korea" },
@@ -265,7 +265,7 @@ window.SAIL_DATA = {
       title: "Disentangling Channel Semantics in Vision Transformers via Token Decorrelation and Composition-Aware Modulation",
       authors: "Daeun Kim, Hyejin Park, Hyesong Choi, and Dongbo Min",
       venue: "Under review, 2026" },
-    { id: "P6", group: "collab", tag: "Preprint", year: 2025, area: "1-A", pendingTitle: true, // 최신 제목 교수님 확인
+    { id: "P6", group: "collab", tag: "Preprint", year: 2025, area: "1-A", checkTitle: true, // 최신 제목 교수님 확인
       title: "Bootstrap Your Own Noise: Denoising Adaptive Noise in Diffusion Models for SSL",
       authors: "Hyesong Choi, Daeun Kim, and Dongbo Min",
       venue: "Preprint, 2025" },
@@ -273,7 +273,7 @@ window.SAIL_DATA = {
       title: "How Should Corruption Be Used in SSL? Empirical Insights for Effective Pretraining",
       authors: "Hyesong Choi, Daeun Kim, Sungmin Cha, Kwang Moo Yi, and Dongbo Min",
       venue: "arXiv:2412.19104", links: { paper: "https://arxiv.org/abs/2412.19104" } },
-    { id: "P4", group: "collab", tag: "Preprint", year: 2025, area: "3-C", pendingTitle: true, // 최신 제목 교수님 확인
+    { id: "P4", group: "collab", tag: "Preprint", year: 2025, area: "3-C", checkTitle: true, // 최신 제목 교수님 확인
       title: "Student-Guided Teacher Adaptation for Robust Adversarial Distillation",
       authors: "Hyejin Park, Hyesong Choi, and Dongbo Min",
       venue: "Preprint, 2025" },
@@ -411,39 +411,43 @@ document.addEventListener('DOMContentLoaded', function () {
     }).join('');
   });
 
-  /* ---------- Research 페이지 주제 탭 (STEP 3 전까지 기존 페이지용) ---------- */
-  const topicTabs = document.querySelectorAll('.topic-tab');
-  const topicPanels = document.querySelectorAll('.topic-panel');
-  const topicDefaultPanel = document.querySelector('.topic-default-panel');
-
-  function activateTopic(topic) {
-    if (!topicTabs.length || !topicPanels.length) return;
-    const hasTopic = Boolean(topic);
-    topicTabs.forEach((tab) => {
-      tab.classList.toggle('active', hasTopic && tab.dataset.topic === topic);
-    });
-    topicPanels.forEach((panel) => {
-      panel.classList.toggle('active', hasTopic && panel.dataset.topic === topic);
-    });
-    if (topicDefaultPanel) topicDefaultPanel.classList.toggle('hidden', hasTopic);
+  /* ---------- 논문 목록: <ul data-papers="C14, C13, ..."> ----------
+     HTML에 적은 번호 순서대로 논문 카드를 그립니다. (Research, Publications 공용) */
+  function pubItem(p) {
+    const url = p.links && p.links.paper;
+    const title = '[' + esc(p.id) + '] ' + esc(p.title);
+    const head = url
+      ? '<a class="publication-title" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + title + '</a>'
+      : '<span class="publication-title no-link">' + title + '</span>';
+    return '<li class="publication-item" id="paper-' + esc(p.id) + '">' + head +
+      '<p class="publication-meta">' + formatAuthors(p.authors) + '</p>' +
+      '<div class="pub-venue">' +
+        '<span class="venue' + (p.top ? ' venue--top' : '') + '">' + esc(p.tag) + '</span>' +
+        '<span>' + esc(p.venue) + '</span>' +
+        (p.note ? '<span class="pub-note">' + esc(p.note) + '</span>' : '') +
+      '</div></li>';
   }
 
-  function updateTopicUrl(topic) {
-    const url = new URL(window.location.href);
-    if (topic) url.searchParams.set('topic', topic);
-    else url.searchParams.delete('topic');
-    url.hash = 'research-interest';
-    history.replaceState(null, '', url.toString());
-  }
+  document.querySelectorAll('[data-papers]').forEach((list) => {
+    const ids = list.dataset.papers.split(',').map((x) => x.trim()).filter(Boolean);
+    list.innerHTML = ids.map((id) => pubById[id])
+      .filter((p) => p && !p.pending)
+      .map(pubItem).join('');
+  });
 
-  if (topicTabs.length && topicPanels.length) {
-    activateTopic(new URLSearchParams(window.location.search).get('topic'));
-    topicTabs.forEach((tab) => {
-      tab.addEventListener('click', function () {
-        const next = tab.classList.contains('active') ? null : tab.dataset.topic;
-        activateTopic(next);
-        updateTopicUrl(next);
-      });
-    });
+  /* ---------- 주소에 #위치가 있으면, 목록을 다 그린 뒤 다시 그 위치로 이동 ---------- */
+  if (window.location.hash) {
+    const target = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    if (target) {
+      const jump = () => {
+        const html = document.documentElement;
+        const prev = html.style.scrollBehavior;
+        html.style.scrollBehavior = 'auto'; // 부드러운 스크롤 잠시 끄기
+        target.scrollIntoView({ block: 'start' });
+        html.style.scrollBehavior = prev;
+      };
+      jump();
+      window.addEventListener('load', jump, { once: true });
+    }
   }
 });
