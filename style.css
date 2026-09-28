@@ -2032,3 +2032,183 @@ h2 {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+/* =========================================================
+   STEP 5 — People 페이지 (style.css 맨 끝에 이어 붙이기)
+   ========================================================= */
+.people-stack {
+  display: grid;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.people-stack .member-section-card {
+  scroll-margin-top: 110px;
+}
+
+/* 교수 소개 */
+.pi-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+}
+
+.pi-photo,
+.pi-photo img {
+  width: 150px;
+}
+
+.pi-photo img {
+  height: 195px;
+}
+
+.pi-info {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.pi-full-name {
+  margin-bottom: 4px;
+  font-size: 1.3rem;
+}
+
+.pi-title {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #3f4453;
+}
+
+.pi-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.pi-bio {
+  margin: 22px 0 0;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+/* 작은 표 (Experience, Services, Alumni, Teaching) */
+.data-table--small {
+  min-width: 520px;
+  font-size: 0.88rem;
+}
+
+.data-table--small td:first-child {
+  white-space: nowrap;
+  color: var(--muted);
+  width: 1%;
+}
+
+.data-table--small td:last-child {
+  white-space: normal;
+  color: var(--text);
+}
+
+/* 학생 목록 */
+.member-count {
+  margin: 0 0 20px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.member-group-title {
+  margin: 8px 0 16px;
+  font-size: 1.05rem;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 32px;
+  margin-bottom: 28px;
+}
+
+.member-grid:last-child {
+  margin-bottom: 0;
+}
+
+.member-grid .member-info {
+  gap: 4px;
+}
+
+.member-topic {
+  margin: 2px 0 0;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.member-papers {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.member-papers a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.member-grid .member-contact {
+  font-size: 0.88rem;
+  word-break: break-all;
+}
+
+/* Gallery 링크 */
+.gallery-link-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  padding: 20px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f7dee0 0%, #ecd6e2 45%, #cdd9ec 100%);
+  color: var(--accent);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.gallery-link-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(2, 24, 67, 0.12);
+}
+
+.gallery-link-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.gallery-link-title::after {
+  content: " →";
+}
+
+.gallery-link-desc {
+  font-size: 0.93rem;
+}
+
+@media (max-width: 840px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .pi-profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pi-buttons {
+    justify-content: center;
+  }
+}
