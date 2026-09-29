@@ -2096,12 +2096,12 @@ h2 {
 /* 작은 표 (Experience, Services, Alumni, Teaching) */
 .data-table--small {
   min-width: 520px;
-  font-size: 0.88rem;
+  font-size: 0.96rem;
 }
 
 .data-table--small td:first-child {
   white-space: nowrap;
-  color: var(--muted);
+  color: #5b6072;
   width: 1%;
 }
 
@@ -2113,8 +2113,7 @@ h2 {
 /* 학생 목록 */
 .member-count {
   margin: 0 0 20px;
-  font-weight: 600;
-  color: var(--accent);
+  color: var(--muted);
 }
 
 .member-group-title {
@@ -2363,13 +2362,4 @@ a.media-outlet {
 /* People 페이지: 휴대폰에서 표 때문에 카드가 화면 밖으로 넘치던 문제 수정 */
 .people-stack > * {
   min-width: 0;
-}
-
-/* People 페이지 표(교수님 약력 등) 글씨를 학생 소개 글씨와 같은 크기·진하기로 */
-.people-stack .data-table--small {
-  font-size: 0.96rem;
-}
-
-.people-stack .data-table--small td:first-child {
-  color: #5b6072;
 }
