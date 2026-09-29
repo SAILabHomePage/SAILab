@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAILab | Contact</title>
+  <title>SAIL | Scalable AI Lab, Soongsil University</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -14,17 +14,17 @@
         <span class="brand-name">SAILab</span>
         <span class="brand-tag">Scalable AI Lab</span>
       </a>
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="news.html" class="nav-link">News</a>
         <a href="research.html" class="nav-link">Research</a>
         <a href="publications.html" class="nav-link">Publications</a>
         <a href="members.html" class="nav-link">People</a>
         <a href="talks.html" class="nav-link">Talks &amp; Media</a>
         <a href="join.html" class="nav-link">Join Us</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="contact.html" class="nav-link active" aria-current="page">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -38,50 +38,52 @@
         <div class="contact-card-stack">
           <div class="contact-card">
             <h2>Information</h2>
-            
-            <div class="contact-info-block">
-              <h3>  Tel.</h3>
-              <p class="contact-detail">  +82 02-850-1464</p>
+            <h3>Tel.</h3>
+            <p class="contact-detail"><a href="tel:+8228501464">+82-2-850-1464</a></p>
 
-              <h3>  E-mail</h3>
-              <p class="contact-detail">  Prof. hyesong@ssu.ac.kr</p>
-              <p class="contact-detail">  LM. soheekim624@daum.net</p>
-            </div>
+            <h3>E-mail</h3>
+            <p class="contact-detail">Prof. <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a></p>
+            <!-- 랩 매니저 학교 메일(@soongsil.ac.kr 또는 @ssu.ac.kr)을 받으면 아래 두 곳의 주소를 바꾸세요 -->
+            <p class="contact-detail">LM. <a href="mailto:soheekim624@daum.net">soheekim624@daum.net</a></p>
           </div>
 
           <div class="contact-card">
             <h2>Address</h2>
-            
-            <div class="contact-address-block">
-              <p><strong>  Office:</strong> <span class="contact-detail"># 707, Venture Hall</span></p>
-              <p><strong>  Lab:</strong> <span class="contact-detail"># B123 &amp; 526, Hyungnam Engineering Building</span></p>
-              <p class="contact-detail">  369, Sangdo-ro, Dongjak-gu, Seoul, 06978</p>
-            </div>
+            <p><strong>Office:</strong> <span class="contact-detail">#707, Venture Hall</span></p>
+            <p><strong>Lab:</strong> <span class="contact-detail">#B123 &amp; 526, Hyungnam Engineering Building</span></p>
+            <p class="contact-detail">369, Sangdo-ro, Dongjak-gu, Seoul, 06978</p>
 
             <div class="map-grid">
               <div>
                 <h3>Office</h3>
                 <div class="map-frame">
-                  <iframe src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90+%EB%B2%A4%ED%84%B0%EA%B4%80&output=embed" loading="lazy"></iframe>
+                  <!-- 숭실대학교 벤처관 -->
+                  <iframe title="Map: Venture Hall, Soongsil University" src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90+%EB%B2%A4%EC%B2%98%EA%B4%80&amp;output=embed" loading="lazy"></iframe>
                 </div>
               </div>
               <div>
                 <h3>Lab</h3>
                 <div class="map-frame">
-                  <iframe src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90+%ED%98%84%EB%82%A8%EA%B3%B5%ED%95%99%EA%B4%80&output=embed" loading="lazy"></iframe>
+                  <!-- 숭실대학교 형남공학관 -->
+                  <iframe title="Map: Hyungnam Engineering Building, Soongsil University" src="https://www.google.com/maps?q=%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90+%ED%98%95%EB%82%A8%EA%B3%B5%ED%95%99%EA%B4%80&amp;output=embed" loading="lazy"></iframe>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
+          <p class="contact-join">Interested in joining? See <a href="join.html">Join Us</a>.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>SAILab · Scalable AI Lab</p>
+      <p>Scalable AI Lab (SAIL), School of Electronic Engineering, Soongsil University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a>
+      </div>
     </div>
   </footer>
 </body>
