@@ -81,7 +81,8 @@ button {
 
 .nav-link {
   font-size: 0.95rem;
-  color: var(--muted);
+  font-weight: 500;
+  color: #4d5263;
   padding: 6px 0;
   transition: color 0.2s ease, transform 0.2s ease;
 }
@@ -89,6 +90,10 @@ button {
 .nav-link.active,
 .nav-link:hover {
   color: var(--accent);
+}
+
+.nav-link.active {
+  font-weight: 700;
 }
 
 .nav-toggle {
