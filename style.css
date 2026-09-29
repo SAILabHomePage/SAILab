@@ -2328,3 +2328,39 @@ a.media-outlet {
 .join-contact-more {
   margin-top: 6px;
 }
+
+/* =========================================================
+   마지막 단계 — Contact 페이지 (style.css 맨 끝에 이어 붙이기)
+   ========================================================= */
+
+/* 지도 높이 고정 (기존에는 iframe이 150px로 줄어들던 문제) */
+.map-frame {
+  height: 280px;
+  min-height: 0;
+}
+
+.map-frame iframe {
+  display: block;
+}
+
+.contact-card a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-join {
+  margin: 4px 0 0;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.contact-join a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* People 페이지: 휴대폰에서 표 때문에 카드가 화면 밖으로 넘치던 문제 수정 */
+.people-stack > * {
+  min-width: 0;
+}
