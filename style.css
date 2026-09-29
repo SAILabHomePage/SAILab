@@ -2364,3 +2364,12 @@ a.media-outlet {
 .people-stack > * {
   min-width: 0;
 }
+
+/* People 페이지 표(교수님 약력 등) 글씨를 학생 소개 글씨와 같은 크기·진하기로 */
+.people-stack .data-table--small {
+  font-size: 0.96rem;
+}
+
+.people-stack .data-table--small td:first-child {
+  color: #5b6072;
+}
