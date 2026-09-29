@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAIL | Scalable AI Lab, Soongsil University</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-name">SAILab</span>
+        <span class="brand-tag">Scalable AI Lab</span>
+      </a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="members.html" class="nav-link">People</a>
+        <a href="talks.html" class="nav-link active" aria-current="page">Talks &amp; Media</a>
+        <a href="join.html" class="nav-link">Join Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1>Talks &amp; Media</h1>
+
+        <!-- ================= Invited Talks ================= -->
+        <section class="pub-section" id="talks">
+          <h2>Invited Talks</h2>
+          <!--
+            - 10월 8일 세미나가 끝나면 "(scheduled)" 지우기
+            - 발표 자료를 받으면 제목 뒤에 <a class="pub-btn" href="files/파일이름.pdf" target="_blank" rel="noopener">Slides</a> 추가
+          -->
+          <div class="table-wrap">
+            <table class="data-table data-table--small talks-table">
+              <thead>
+                <tr><th scope="col">Date</th><th scope="col">Title</th><th scope="col">Venue</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Oct. 8, 2026 <span class="talk-scheduled">(scheduled)</span></td>
+                  <td class="talk-title">Beyond Pixels: Detecting AI-Generated Images through Social Gaze Consistency</td>
+                  <td>3rd NEIT (Natural Sciences, Engineering, and IT) Convergence Research Seminar, Soongsil University</td>
+                </tr>
+                <tr>
+                  <td>Jul. 13, 2026</td>
+                  <td class="talk-title">Three Challenges of Large-Scale Multimodal AI: Data, Efficiency, and Reliability</td>
+                  <td>IT Convergence Major Workshop Seminar, Soongsil University</td>
+                </tr>
+                <tr>
+                  <td>Feb. 10, 2026</td>
+                  <td class="talk-title">Environment-Agnostic AI Agents</td>
+                  <td>Invited Seminar, AI Security Research Center (ITRC), Soongsil University</td>
+                </tr>
+                <tr>
+                  <td>Sep. 30, 2025</td>
+                  <td class="talk-title">From Pre-training to Transfer: Designing Parameter Pathways for AI Security</td>
+                  <td>Invited Expert Lecture, AI Security Research Center (ITRC), Soongsil University</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ================= Media Coverage ================= -->
+        <section class="pub-section" id="media">
+          <h2>Media Coverage</h2>
+          <!--
+            한 줄 형식: <li><a href="기사주소" ...>언론사</a> · 기사 제목 · 날짜</li>
+            주소가 없는 기사는 언론사 이름을 <span class="media-outlet">로 두었습니다. 주소를 찾으면 <a>로 바꾸세요.
+            새 기사는 script.js 윗부분 articles 에도 같이 추가하면 News의 Related Article에도 연결됩니다.
+          -->
+
+          <div class="media-group">
+            <h3><span class="media-date">2026.08</span> Feature interview: &ldquo;A lab sailing relentlessly toward AGI&rdquo; (Issue Maker)</h3>
+            <ul class="media-list">
+              <li><a class="media-outlet" href="http://www.issuemaker.kr/news/articleView.html?idxno=51675" target="_blank" rel="noopener noreferrer">이슈메이커</a> · &ldquo;AGI를 향해 끊임없이 항해하는 연구실이 되겠습니다&rdquo; · 2026.08</li>
+              <li><a class="media-outlet" href="https://blog.naver.com/imbig8848/224393131081" target="_blank" rel="noopener noreferrer">이슈메이커 네이버 블로그</a> · 같은 인터뷰의 블로그 게시본 · 2026.08</li>
+            </ul>
+          </div>
+
+          <div class="media-group">
+            <h3><span class="media-date">2026.06</span> Three papers accepted at ECCV 2026, two with Meta and NAVER</h3>
+            <ul class="media-list">
+              <li><span class="media-outlet">숭실대학교 뉴스센터</span> · 최혜송 교수 연구팀, AI·컴퓨터비전 분야 세계 3대 국제학술대회 ECCV 2026 논문 3편 채택 · 2026.06</li>
+              <li><a class="media-outlet" href="https://www.newspim.com/news/view/20260624000689" target="_blank" rel="noopener noreferrer">뉴스핌</a> · 숭실대 최혜송 교수팀, 세계 3대 컴퓨터비전 학회 ECCV 논문 3편 채택 · 2026.06</li>
+              <li><a class="media-outlet" href="http://www.dailysmart.co.kr/news/articleView.html?idxno=125988" target="_blank" rel="noopener noreferrer">스마트경제</a> · &ldquo;K-인공지능의 쾌거&rdquo;…최혜송 숭실대 전자정보공학부 교수 연구팀, 세계 최고 권위 &lsquo;ECCV&rsquo; 논문 3편 뚫었다 · 2026.06</li>
+              <li><span class="media-outlet">한국대학신문</span> · 숭실대 최혜송 교수팀, AI·컴퓨터비전 분야 세계 3대 국제학술대회 ECCV 2026 논문 3편 채택 · 2026.06</li>
+              <li><span class="media-outlet">전자신문</span> · [에듀플러스]숭실대 최혜송 교수 연구팀, AI·컴퓨터비전 분야 세계 3대 국제학술대회 ECCV 2026 논문 3편 채택 · 2026.06</li>
+              <li><span class="media-outlet">핀포인트뉴스</span> · 숭실대 최혜송 교수 연구팀, ECCV 2026 논문 3편 채택 · 2026.06</li>
+              <li><span class="media-outlet">대학IN</span> · 숭실대 최혜송 교수 연구팀, ECCV 2026 논문 3편 채택 · 2026.06</li>
+            </ul>
+          </div>
+
+          <div class="media-group">
+            <h3><span class="media-date">2025.08-09</span> Appointed as faculty at Soongsil University right after Ph.D.</h3>
+            <ul class="media-list">
+              <li><a class="media-outlet" href="https://myr.ewha.ac.kr/cse/student/news.do?mode=view&amp;articleNo=758552&amp;title=%EC%B5%9C%ED%98%9C%EC%86%A1+%EC%84%9D%EB%B0%95%EC%82%AC%ED%86%B5%ED%95%A9%EA%B3%BC%EC%A0%95%EC%83%9D%2C+%EC%88%AD%EC%8B%A4%EB%8C%80%ED%95%99%EA%B5%90+%EC%A0%84%EC%9E%90%EC%A0%95%EB%B3%B4%EA%B3%B5%ED%95%99%EB%B6%80+%EC%A0%84%EC%9E%84%EA%B5%90%EC%9B%90+%EC%9E%84%EC%9A%A9" target="_blank" rel="noopener noreferrer">이화여대 컴퓨터공학전공</a> · 최혜송 석박사통합과정생, 숭실대학교 전자정보공학부 전임교원 임용</li>
+              <!-- 아래 3개는 기사 제목과 날짜를 확인해서 " · 기사 제목 · 날짜" 를 덧붙이기 -->
+              <li><a class="media-outlet" href="https://www.kyosu.net/news/articleView.html?idxno=142177" target="_blank" rel="noopener noreferrer">교수신문</a></li>
+              <li><a class="media-outlet" href="https://www.eduplusnews.com/news/articleView.html?idxno=15833" target="_blank" rel="noopener noreferrer">에듀플러스</a></li>
+              <li><a class="media-outlet" href="https://edu.donga.com/news/articleView.html?idxno=94114" target="_blank" rel="noopener noreferrer">동아에듀</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Scalable AI Lab (SAIL), School of Electronic Engineering, Soongsil University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
