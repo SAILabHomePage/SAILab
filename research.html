@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAILab | Research</title>
+  <title>SAIL | Scalable AI Lab, Soongsil University</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
@@ -15,17 +15,17 @@
         <span class="brand-name">SAILab</span>
         <span class="brand-tag">Scalable AI Lab</span>
       </a>
-      <nav class="site-nav">
-        <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html" class="nav-link">Home</a>
         <a href="news.html" class="nav-link">News</a>
-        <a href="research.html" class="nav-link active">Research</a>
+        <a href="research.html" class="nav-link active" aria-current="page">Research</a>
         <a href="publications.html" class="nav-link">Publications</a>
         <a href="members.html" class="nav-link">People</a>
         <a href="talks.html" class="nav-link">Talks &amp; Media</a>
         <a href="join.html" class="nav-link">Join Us</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
-      <button class="nav-toggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="site-nav" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -35,322 +35,193 @@
     <section class="section">
       <div class="container">
         <h1>Research</h1>
+        <p class="research-lead">Our research follows one thread, Corruption-to-Reconstruction (C2R), across three pillars: making vision-language foundation models efficient, taking them from perception to action in the physical world, and keeping them trustworthy and secure. This agenda is supported by the NRF Outstanding Early-Career Researcher Program (2026-2029).</p>
 
-        <h2 id="research-interest">Research Interest</h2>
+        <!--
+          논문 목록 넣는 법: <ul class="publication-list" data-papers="번호, 번호, ..."></ul>
+          적은 순서대로 나오고, 제목·저자·학회는 script.js 윗부분 데이터에서 자동으로 가져옵니다.
+          대표 그림 넣는 법: pillar-figure 안의 img 줄 앞뒤 주석 표시를 지우면 됩니다.
+        -->
 
-        <div class="interest-grid topic-tabs">
-          <button type="button" class="interest-card topic-tab" data-topic="vlms">VLMs</button>
-          <button type="button" class="interest-card topic-tab" data-topic="ai-security">AI Security</button>
-          <button type="button" class="interest-card topic-tab" data-topic="data-filtering">Data Filtering</button>
-          <button type="button" class="interest-card topic-tab" data-topic="social-ai">Social AI</button>
-          <button type="button" class="interest-card topic-tab" data-topic="reinforcement-learning">Reinforcement Learning</button>
-          <button type="button" class="interest-card topic-tab" data-topic="autonomous-driving">Autonomous Driving</button>
-          <button type="button" class="interest-card topic-tab" data-topic="diffusion-models">Diffusion Models</button>
-        </div>
+        <!-- ===== 기둥 1 ===== -->
+        <section class="pillar" id="pillar-1">
+          <div class="pillar-head">
+            <div>
+              <h2>Efficient Learning of Vision-Language Foundation Models <span class="tag-core">Core</span></h2>
+              <p class="pillar-desc">Salience- and token-aware masking cuts pre-training time by up to 50% without losing representation quality. Corruption applied at the right place lets VLMs see fine-grained detail (ECC) and makes vision-language encoders robust (Aether). We also select the image-text pairs that actually matter, and compress large vision and CLIP models for on-device and AI-semiconductor settings.</p>
+            </div>
+            <div class="pillar-figure"><!-- <img src="images/research/pillar-1.png" alt="Efficient Learning of Vision-Language Foundation Models"> --></div>
+          </div>
 
-        <!-- 기본 설명: 아무 버튼도 안 눌렸을 때만 보임 -->
-        <div class="topic-default-panel">
-          <div class="research-detail-card">
-            <div class="research-interest-block">
-              <p class="research-line">
-                <strong>Improving the efficiency and performance of large-scale
-                  <span class="research-accent">Vision-Language Models (VLMs)</span></strong>
-              </p>
+          <div class="pillar-sub">
+            <h3>1-A. Training: corruption-based pre-training</h3>
+            <ul class="publication-list" data-papers="C14, C13, C12, C7, C6, P6, P5, P7, P1"></ul>
+          </div>
+          <div class="pillar-sub">
+            <h3>1-B. Data: filtering and selection</h3>
+            <ul class="publication-list" data-papers="P8, P15"></ul>
+          </div>
+          <div class="pillar-sub">
+            <h3>1-C. Deployment: efficient inference and adaptation</h3>
+            <ul class="publication-list" data-papers="P14, P12, C9, P2, C11, J4, J6"></ul>
+          </div>
+        </section>
 
-              <p class="research-line">
-                <strong><span class="research-accent">AI security</span></strong>,
-                including agentic defensive AI for autonomous security systems and deepfake detection
-              </p>
+        <!-- ===== 기둥 2 ===== -->
+        <section class="pillar" id="pillar-2">
+          <div class="pillar-head">
+            <div>
+              <h2>From Perception to Action: toward Embodied and Physical AI</h2>
+              <p class="pillar-desc">An embodied agent needs two things: acting from pixels and perceiving the 3D world. We have worked on sample-efficient, environment-agnostic visual reinforcement learning, and on monocular depth and stereo matching that keeps adapting in changing real-world conditions. We are now combining these with our efficient VLMs to build vision-language-action (VLA) and video models for robots and autonomous driving (new direction, launched in 2026).</p>
+            </div>
+            <div class="pillar-figure"><!-- <img src="images/research/pillar-2.png" alt="From Perception to Action: toward Embodied and Physical AI"> --></div>
+          </div>
 
-              <p class="research-line">
-                <strong>Large-scale <span class="research-accent">Data filtering</span></strong>
-                and curation for efficient pre-training
-              </p>
+          <div class="pillar-sub">
+            <h3>2-A. Acting from pixels: visual reinforcement learning</h3>
+            <ul class="publication-list" data-papers="C8, C5, C4, J1"></ul>
+          </div>
+          <div class="pillar-sub">
+            <h3>2-B. 3D perception for driving and robots</h3>
+            <ul class="publication-list" data-papers="C10, C1, J5, J3, C2, C3, J2"></ul>
+          </div>
+          <div class="pillar-sub">
+            <h3>2-C. Vision-Language-Action models (ongoing)</h3>
+            <p class="ongoing-note">Ongoing project, launched in 2026</p>
+          </div>
+        </section>
 
-              <p class="research-line">
-                <strong><span class="research-accent">Social AI</span></strong>,
-                focusing on human-centric and socially aware intelligence
-              </p>
+        <!-- ===== 기둥 3 ===== -->
+        <section class="pillar" id="pillar-3">
+          <div class="pillar-head">
+            <div>
+              <h2>Trustworthy and Secure AI</h2>
+              <p class="pillar-desc">As models become more capable, we study how to keep them verifiable: detecting AI-generated images of people through social-gaze consistency (with Prof. James M. Rehg, UIUC), auditing deepfake detectors, analyzing attack surfaces of AI agents, and measuring when LLM verifiers fail together. This line is funded by the National Security Research Institute, the IITP AI-agent safety program with KAIST, and the ITRC AI Security Research Center.</p>
+            </div>
+            <div class="pillar-figure"><!-- <img src="images/research/pillar-3.png" alt="Trustworthy and Secure AI"> --></div>
+          </div>
 
-              <p class="research-line">
-                <strong><span class="research-accent">Reinforcement Learning</span></strong>
-                for adaptive and generalizable decision-making systems
-              </p>
+          <div class="pillar-sub">
+            <h3>3-A. Authenticity: deepfake and AI-generated image detection (Social AI)</h3>
+            <ul class="publication-list" data-papers="P13, P9"></ul>
+          </div>
+          <div class="pillar-sub">
+            <h3>3-B. Security of AI agents and LLMs</h3>
+            <ul class="publication-list" data-papers="W3, W2, W1, P11, P10"></ul>
+          </div>
+          <div class="pillar-sub">
+            <h3>3-C. Robustness</h3>
+            <ul class="publication-list" data-papers="P4"></ul>
+          </div>
+        </section>
 
-              <p class="research-line">
-                <strong><span class="research-accent">Autonomous driving</span>-related</strong>
-                perception and decision-making tasks
-              </p>
-
-              <p class="research-line">
-                <strong>Generative modeling with <span class="research-accent">Diffusion models</span></strong>
-              </p>
+        <!-- ===== 응용 ===== -->
+        <section class="pillar pillar--small" id="applications">
+          <h2>AI for Science and Industry</h2>
+          <div class="app-list">
+            <div class="app-row">
+              <h3>AI-Bio</h3>
+              <ul class="publication-list" data-papers="P3"></ul>
+            </div>
+            <div class="app-row">
+              <h3>AI-Semiconductor</h3>
+              <p class="app-text"><a href="#paper-P12">[P12] The Rescue Effect</a>, with the COSS Next-Generation Semiconductor project (see Funding below).</p>
+            </div>
+            <div class="app-row">
+              <h3>Audio-visual music understanding</h3>
+              <p class="app-text">Two industry-academia R&amp;D projects with Spartan SW (Phase I and Phase II).</p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <!-- 버튼별 패널 -->
-        <div class="topic-panels">
+        <!-- ===== Funding and Collaborators ===== -->
+        <section class="pillar" id="funding">
+          <h2>Funding and Collaborators</h2>
+          <p class="funding-lead">Since Sep. 2025: 7 research grants as Principal Investigator and participation in 3 national programs.</p>
 
-          <div class="topic-panel" data-topic="vlms">
-            <div class="research-detail-card">
-              <p class="topic-intro">
-                Improving the efficiency and performance of large-scale Vision-Language Models (VLMs)
-              </p>
-
-              <ul class="publication-list">
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P4] What Does the Caption Really Say? Counterfactual Phrase Intervention for Compositional Data Selection in Vision-Language Pretraining</span>
-                  <p class="publication-meta">Hyejin Go, Semi Lee, and Hyesong Choi <br>arXiv preprint, 2026</p>
-                </li>
-                
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P3] AdaMerge: Salience-Aware Adaptive Token Merging for Training-Free Acceleration of Vision Transformers</span>
-                  <p class="publication-meta">Semi Lee, Hyejin Go, Hyesong Choi <br> arXiv preprint, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P2] When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection</span>
-                  <p class="publication-meta">Jihyeon Kim, Sohee Kim, Soosan Lee, Souhwan Jung, James Matthew Rehg, Hyesong Choi <br> arXiv preprint, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P1] The Rescue Effect: Spatio-Semantic Early Exit Bypasses Quantization Collapse in CLIP</span>
-                  <p class="publication-meta">Kahyeon Nam, Hyesong Choi <br> arXiv preprint, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P10] Isotropic Embedding Perturbations for Robust Vision Language Encoders</span>
-                  <p class="publication-meta">Hyesong Choi, Daeun Kim, Song Park, Taekyung Kim, Byeongho Heo, Sangdoo Yun, Dongbo Min, and Dongyoon Han<br>under review, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P8] ECC: Encoder-Centric Corruption for Fine-Grained Vision in VLMs</span>
-                  <p class="publication-meta">Hyesong Choi, Daeun Kim, Sungmin Cha, Kwang Moo Yi, and Dongbo Min<br>under review, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P6] Enhancing Alignment for Unified Multimodal Models via Semantically-Grounded Supervision</span>
-                  <p class="publication-meta">Jiyeong Kim, Yerim So, Hyesong Choi, Uiwon Hwang, and Dongbo Min<br>under review, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2409.02838" target="_blank" rel="noopener" class="publication-title">[P3] iConFormer: Dynamic Parameter-Efficient Tuning with Input-Conditioned Adaptation</a>
-                  <p class="publication-meta">Hayeon Jo, Hyesong Choi, Minhee Cho, and Dongbo Min<br>arXiv preprint arXiv:2409.02838</p>
-                </li>
-              </ul>
-            </div>
+          <h3 class="table-title">As Principal Investigator</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th scope="col">Project</th><th scope="col">Funding agency</th><th scope="col">Period</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>NRF Outstanding Early-Career Researcher Program: &ldquo;Enhancing Training Efficiency and Performance of Large-Scale AI Models via the Corruption-to-Reconstruction (C2R) Framework&rdquo;</td>
+                  <td>National Research Foundation of Korea (NRF)</td>
+                  <td>Mar. 2026 - Feb. 2029</td>
+                </tr>
+                <tr>
+                  <td>Analysis and Roadmap of Agentic AI-based Autonomous Security Technologies for the National and Public Sector</td>
+                  <td>National Security Research Institute (NSR)</td>
+                  <td>Apr. 2026 - Oct. 2026</td>
+                </tr>
+                <tr>
+                  <td>Efficient Representation Learning and System Optimization with Large-Scale Models for AI-Semiconductor Convergence</td>
+                  <td>COSS Next-Generation Semiconductor (MOE / NRF)</td>
+                  <td>May 2026 - Dec. 2026</td>
+                </tr>
+                <tr>
+                  <td>Temporally Aligned Audio-Visual-Text Multimodal Foundation Model for Short-Form Music Content</td>
+                  <td>Industry-Academia R&amp;D (Spartan SW), Phase II</td>
+                  <td>Fall 2026</td>
+                </tr>
+                <tr>
+                  <td>Audio-Visual Multimodal Deep Learning Models for Music Content Analysis</td>
+                  <td>Industry-Academia R&amp;D (Spartan SW), Phase I</td>
+                  <td>Spring 2026</td>
+                </tr>
+                <tr>
+                  <td>Pre-training with a General-Purpose Decoder</td>
+                  <td>Soongsil University Research Fund for New Faculty</td>
+                  <td>Sep. 2025 - Aug. 2026</td>
+                </tr>
+                <tr>
+                  <td>Curriculum Development: four new AI courses for the RISE Program and the AI Bootcamp Program</td>
+                  <td>Soongsil University (RISE / AI Bootcamp)</td>
+                  <td>2025 - 2026</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
-          <div class="topic-panel" data-topic="ai-security">
-            <div class="research-detail-card">
-              <p class="topic-intro">
-                AI security, including agentic defensive AI for autonomous security systems and deepfake detection
-              </p>
-              
-              <ul class="publication-list">
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P2] When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection</span>
-                  <p class="publication-meta">Jihyeon Kim, Sohee Kim, Soosan Lee, Souhwan Jung, James Matthew Rehg, Hyesong Choi <br> arXiv preprint, 2026</p>
-                </li>
-                
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P5] Stabilizing Robustness Transfer in Adversarial Distillation with Controlled Teacher Adaptation</span>
-                  <p class="publication-meta">Hyejin Park, Hyesong Choi, and Dongbo Min<br>under review, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P10] Isotropic Embedding Perturbations for Robust Vision Language Encoders</span>
-                  <p class="publication-meta">Hyesong Choi, Daeun Kim, Song Park, Taekyung Kim, Byeongho Heo, Sangdoo Yun, Dongbo Min, and Dongyoon Han<br>under review, 2026</p>
-                </li>
-              </ul>
-            </div>
+          <h3 class="table-title">As Participating Faculty in National Programs</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th scope="col">Project</th><th scope="col">Funding agency / Partners</th><th scope="col">Period</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Autonomous Control and Proactive Defense Mechanisms for Enhancing the Reliability and Safety of AI Agents</td>
+                  <td>IITP (MSIT). With KAIST (lead), Seoul National University, Coontec</td>
+                  <td>Apr. 2026 - Dec. 2029</td>
+                </tr>
+                <tr>
+                  <td>AI Security Research Center (ITRC), Director: Prof. Souhwan Jung</td>
+                  <td>IITP-ITRC (MSIT)</td>
+                  <td>2025 - Present</td>
+                </tr>
+                <tr>
+                  <td>AI-Centered University Program (&ldquo;AI Omniversity&rdquo;): co-author of the winning proposal and participating faculty</td>
+                  <td>MSIT / IITP</td>
+                  <td>2026 - 2033</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-
-          <div class="topic-panel" data-topic="data-filtering">
-            <div class="research-detail-card">
-              <p class="topic-intro">
-                Large-scale Data filtering and curation for efficient pre-training
-              </p>
-              
-              <ul class="publication-list">
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P4] What Does the Caption Really Say? Counterfactual Phrase Intervention for Compositional Data Selection in Vision-Language Pretraining</span>
-                  <p class="publication-meta">Hyejin Go, Semi Lee, and Hyesong Choi <br>arXiv preprint, 2026</p>
-                </li>
-                
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P9] CORE: Corruption-Reconstruction based Data Filtering Network</span>
-                  <p class="publication-meta">Hyesong Choi, Daeun Kim, Seungmin Baek, Taekyung Kim, Byeongho Heo, Dongbo Min, and Dongyoon Han<br>under review, 2026</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2404.08327" target="_blank" rel="noopener" class="publication-title">[C7] Salience-Based Adaptive Masking: Revisiting Token Dynamics for Enhanced Pre-training</a>
-                  <p class="publication-meta">Hyesong Choi, Hyejin Park, Kwang Moo Yi, Sungmin Cha, and Dongbo Min<br>ECCV, 2024</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2404.08330" target="_blank" rel="noopener" class="publication-title">[C6] Emerging Property of Masked TOken for Effective Pre-training</a>
-                  <p class="publication-meta">Hyesong Choi, Hunsang Lee, Seyoung Joung, Hyejin Park, Jiyeong Kim, and Dongbo Min<br>ECCV, 2024</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2409.02513" target="_blank" rel="noopener" class="publication-title">[P2] SG-MIM: Structured Knowledge Guided Efficient Pre-training for Dense Prediction</a>
-                  <p class="publication-meta">Sumin Son, Hyesong Choi, and Dongbo Min<br>arXiv preprint arXiv:2409.02513</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="topic-panel" data-topic="social-ai">
-            <div class="research-detail-card">
-              <p class="topic-intro">
-                Social AI, focusing on human-centric and socially aware intelligence
-              </p>
-
-              <ul class="publication-list">
-                
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P2] When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection</span>
-                  <p class="publication-meta">Jihyeon Kim, Sohee Kim, Soosan Lee, Souhwan Jung, James Matthew Rehg, Hyesong Choi <br> arXiv preprint, 2026</p>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-
-          <div class="topic-panel" data-topic="reinforcement-learning">
-            <div class="research-detail-card">
-              <p class="topic-intro">
-                Reinforcement Learning for adaptive and generalizable decision-making systems
-              </p>
-              
-              <ul class="publication-list">
-                <li class="publication-item">
-                  <a href="https://openreview.net/forum?id=0AumdfLzpK&referrer=%5Bthe+profile+of+Hyesong+Choi%5D%28%2Fprofile%3Fid%3D~Hyesong_Choi1%29" target="_blank" rel="noopener" class="publication-title">[C8] A Simple Framework for Generalization in Visual RL under Dynamic Scene Perturbations</a>
-                  <p class="publication-meta">Wonil Song, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min<br>NeurIPS, 2024</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Choi_Environment_Agnostic_Representation_for_Visual_Reinforcement_Learning_ICCV_2023_paper.pdf" target="_blank" rel="noopener" class="publication-title">[C5] Environment Agnostic Representation for Visual Reinforcement Learning</a>
-                  <p class="publication-meta">Hyesong Choi, Hunsang Lee, Seongwon Jeong, and Dongbo Min<br>ICCV, 2023</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Choi_Local-Guided_Global_Paired_Similarity_Representation_for_Visual_Reinforcement_Learning_CVPR_2023_paper.pdf" target="_blank" rel="noopener" class="publication-title">[C4] Local-Guided Global: Paired Similarity Representation for Visual Reinforcement Learning</a>
-                  <p class="publication-meta">Hyesong Choi, Hunsang Lee, Wonil Song, Sangryul Jeon, Kwanghoon Sohn, and Dongbo Min<br>CVPR, 2023</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417423011272" target="_blank" rel="noopener" class="publication-title">[J1] Learning Disentangled Skills for Hierarchical Reinforcement Learning through Trajectory Autoencoder with Weak Labels</a>
-                  <p class="publication-meta">Wonil Song, Sangryul Jeon, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min<br>ESWA, 2023</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="topic-panel" data-topic="autonomous-driving">
-            <div class="research-detail-card">
-              <p class="topic-intro">
-                Autonomous driving-related perception and decision-making taskS
-              </p>
-  
-              <ul class="publication-list">
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2511.10107" target="_blank" rel="noopener" class="publication-title">[C10] RobIA: Robust Instance-aware Continual Test-time Adaptation for Deep Stereo</a>
-                  <p class="publication-meta">Jueun Ko, Hyewon Park, Hyesong Choi, and Dongbo Min<br>NeurIPS, 2025</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2501.04293" target="_blank" rel="noopener" class="publication-title">[C9] TADFormer: Task-Adaptive Dynamic TransFormer for Efficient Multi-Task Learning</a>
-                  <p class="publication-meta">Seungmin Baek, Soyul Lee, Hayeon Jo, Hyesong Choi, and Dongbo Min<br>CVPR, 2025</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2209.02518" target="_blank" rel="noopener" class="publication-title">[C2] Sequential Cross Attention Based Multi-Task Learning</a>
-                  <p class="publication-meta">Sunkyung Kim, Hyesong Choi, and Dongbo Min<br>ICIP, 2022</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Choi_Adaptive_Confidence_Thresholding_for_Monocular_Depth_Estimation_ICCV_2021_paper.pdf" target="_blank" rel="noopener" class="publication-title">[C1] Adaptive Confidence Thresholding for Monocular Depth Estimation</a>
-                  <p class="publication-meta">Hyesong Choi, Hunsang Lee, Sunok Kim, Seungryoung Kim, and Dongbo Min<br>ICCV, 2021</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2409.02545" target="_blank" rel="noopener" class="publication-title">[J5] UniTT-Stereo: Unified Training of Transformer for Enhanced Stereo Matching</a>
-                  <p class="publication-meta">Soomin Kim, Hyesong Choi, Jihye Ahn, and Dongbo Min<br>IEEE ACCESS, 2025</p>
-                </li>
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[J4] Global Structural Knowledge Distillation for Semantic Segmentation</span>
-                  <p class="publication-meta">Hyejin Park, Keonhee Ahn, Hyesong Choi, and Dongbo Min<br>IEEE ACCESS, 2025</p>
-                </li>
-
-                <li class="publication-item">
-                  <a href="https://arxiv.org/abs/2409.02846" target="_blank" rel="noopener" class="publication-title">[J3] MaDis-Stereo: Enhanced Stereo Matching via Distilled Masked Image Modeling</a>
-                  <p class="publication-meta">Jihye Ahn, Hyesong Choi, Sommin Kim, and Dongbo Min<br>IEEE ACCESS, 2025</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="topic-panel" data-topic="diffusion-models">
-            <div class="research-detail-card">
-              <p class="topic-intro">
-                Generative modeling with Diffusion models
-              </p>
-                
-              <ul class="publication-list">
-
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P2] When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection</span>
-                  <p class="publication-meta">Jihyeon Kim, Sohee Kim, Soosan Lee, Souhwan Jung, James Matthew Rehg, Hyesong Choi <br> arXiv preprint, 2026</p>
-                </li>
-                
-                <li class="publication-item">
-                  <span class="publication-title plain-title">[P7] Adaptive Noise Injection, Bootstrapping Denoising Diffusion for Generalized Recognition</span>
-                  <p class="publication-meta">Hyesong Choi, Daeun Kim, and Dongbo Min<br>under review, 2026</p>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-        <h2 class="research-direction-title">Research Direction</h2>
-        <div class="research-direction-card">
-          <div class="research-direction-block">
-            <p class="research-direction-line">
-              <strong>AI Principles</strong> – Study the fundamental structure and learning mechanisms of modern AI models
-            </p>
-
-            <p class="research-direction-line">
-              <strong>Scalability &amp; Efficiency</strong> – Design architectures and training strategies for scalable and efficient AI
-            </p>
-
-            <p class="research-direction-line">
-              <strong>Generalization</strong> – Develop AI systems that adapt across domains, tasks, and data modalities
-            </p>
-
-            <p class="research-direction-line">
-              <strong>Foundation Model</strong> – Research large-scale models from a core architectural and training perspective
-            </p>
-
-            <p class="research-direction-line">
-              <strong>Academic Sustainability</strong> – Make large models trainable even with limited resources compared to industry
-            </p>
-          </div>
-        </div>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>SAILab · Scalable AI Lab</p>
+      <p>Scalable AI Lab (SAIL), School of Electronic Engineering, Soongsil University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=Ll3vLUsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+        <a href="mailto:hyesong@ssu.ac.kr">hyesong@ssu.ac.kr</a>
+      </div>
     </div>
   </footer>
 </body>
