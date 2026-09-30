@@ -143,7 +143,7 @@ window.SAIL_DATA = {
       authors: "Jiyeong Kim, Yerim So, Hyesong Choi, Uiwon Hwang, and Dongbo Min",
       venue: "ECCV 2026", links: { paper: "https://arxiv.org/abs/2603.19807" } },
     { id: "C12", group: "conf", tag: "WISA", year: 2026, area: "3-B", // 제목의 "Took"은 CV 그대로 (교수님 확인 중)
-      title: "When Task Success Hides Took Misuse: Analyzing Silent Compromise in Browser-Use Agents",
+      title: "When Task Success Hides Tool Misuse: Analyzing Silent Compromise in Browser-Use Agents",
       authors: "Soobin Yim, ChanHyeok Lim, Hung Dinh-Xuan, Hyesong Choi, and Souhwan Jung",
       venue: "WISA 2026, Poster Session, Jeju, Korea" },
     { id: "C11", group: "conf", tag: "ICASSP", year: 2026, area: "1-C",
