@@ -36,7 +36,8 @@
       <div class="container">
         <h1>Publications</h1>
 
-        <!-- 안내문 (지시문 문장 그대로, 표기 규칙 부분만 실제 모양으로 보여줌) -->
+        <!-- 안내문 (지시문 문장 그대로, 표기 규칙 부분만 실제 모양으로 보여줌)
+             "12 papers": CV 목록 기준으로는 NeurIPS 2026 포함 13편 → 교수님 확인 후 수정 -->
         <div class="pub-notice">
           CVPR, ICCV, and ECCV are the three premier conferences in computer vision; NeurIPS and ICLR are the premier conferences in machine learning. 12 papers at these venues, 7 as first author. <strong class="pi-name">Hyesong Choi</strong> in bold; † corresponding author; * equal contribution; <u class="sail-student">underlined</u>: student advised at SAIL.
         </div>
@@ -44,8 +45,10 @@
         <!--
           목록은 script.js 윗부분의 publications 데이터에서 자동으로 채워집니다.
           새 논문은 데이터에 추가만 하면 group 값에 맞는 묶음에 나옵니다.
-          conf = Conference / journal = Journal / workshop = Workshop and Poster
+          conf = Conference / journal = Journal
           student = 학생 주도 묶음 / collab = First-author and collaborative work
+          [2026.09] 교수님 CV에 맞춰 AISec, AGENT-SEC, WISA를 Conference로 옮기고
+                    "Workshop and Poster" 섹션은 삭제했습니다.
         -->
 
         <section class="pub-section" id="conference">
@@ -56,11 +59,6 @@
         <section class="pub-section" id="journal">
           <h2>Journal</h2>
           <ul class="publication-list" data-pub-group="journal"></ul>
-        </section>
-
-        <section class="pub-section" id="workshop">
-          <h2>Workshop and Poster (AI Security)</h2>
-          <ul class="publication-list" data-pub-group="workshop"></ul>
         </section>
 
         <section class="pub-section" id="preprints">
