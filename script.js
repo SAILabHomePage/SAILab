@@ -35,29 +35,26 @@ window.SAIL_DATA = {
      star: true → 굵게 표시 */
   news: [
     // ===== 2026 =====
-    { date: "2026.09", cat: "Paper", // [2026.09 CV 반영] NeurIPS 2026 신규. 월은 9월로 가정
-      text: "\u201cDisentangling Channel Semantics in Vision Transformers via Token Decorrelation and Composition-Aware Modulation\u201d is accepted at NeurIPS 2026." },
-    { date: "2026.09", cat: "Paper", star: true, links: ["A1", "A2", "A3", "A4", "A5", "A6", "A7"], // 교수님 지시: 6월 → 9월로 이동
-      text: "Three papers are accepted at ECCV 2026: ECC (with Meta and UBC) and Aether (with NAVER AI Lab), both first-authored by Prof. Hyesong Choi, and a paper on unified multimodal models. Congratulations!" },
-    { date: "2026.09", cat: "Paper", // 교수님 확인: 2026.09
-      text: "\u201cWhy AI-Assisted Security Monitoring Is Hard to Deploy\u201d is accepted at AISec 2026, the ACM Workshop on Artificial Intelligence and Security (co-located with ACM CCS). (Corresponding author)" },
-    { date: "2026.09", cat: "Paper", // 교수님 확인: 2026.09
-      text: "\u201cWhen Recovery Fails Open\u201d is accepted at AGENT-SEC 2026, the ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems." },
     { date: "2026.09", cat: "Lab",
       text: "Hyejin Go, Sohee Kim, and Jihyeon Kim, who started as undergraduate researchers in SAIL, joined the lab as graduate students. Welcome!" },
     { date: "2026.09", cat: "Paper",
       text: "Seven student-first-author manuscripts from SAIL are now under review, all with Prof. Hyesong Choi as corresponding author." },
     { date: "2026.09", cat: "Grant",
       text: "Awarded an industry-academia R&D project (Spartan SW, Phase II) on temporally aligned audio-visual-text multimodal models for short-form music content. (PI)" },
+    { date: "2026.09", cat: "Paper",
+      text: "\u201cWhy AI-Assisted Security Monitoring Is Hard to Deploy\u201d is accepted at AISec 2026, the ACM Workshop on Artificial Intelligence and Security (co-located with ACM CCS). (Corresponding author)" },
+    { date: "2026.09", cat: "Paper",
+      text: "\u201cWhen Recovery Fails Open\u201d is accepted at AGENT-SEC 2026, the ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems." },
     { date: "2026.08", cat: "Media", star: true, links: ["B1", "B2"],
       text: "Prof. Hyesong Choi was featured in an interview with Issue Maker: \u201cA lab sailing relentlessly toward AGI.\u201d" },
-    { date: "2026.08", cat: "Paper", // CV C12 기준 저자에 교신저자 표시가 없어 "(Corresponding author)" 삭제
-      text: "Our paper was presented at WISA 2026 (World Conference on Information Security Applications), Jeju, Korea." },
-    { date: "2026.08", cat: "Service", // 교수님 확인: 2026.08
+    { date: "2026.08", cat: "Paper",
+      text: "Our poster was presented at WISA 2026 (World Conference on Information Security Applications), Jeju, Korea. (Corresponding author)" },
+    { date: "2026.08", cat: "Service",
       text: "Prof. Hyesong Choi was appointed as an Expert Committee Member of the Future Security Technology Forum (\ubbf8\ub798\ubcf4\uc548\uae30\uc220\ud3ec\ub7fc)." },
-    // AAAI 2027 PC 항목은 교수님 지시로 News에서 삭제 (People > Academic Services에는 그대로 있음)
     { date: "2026.07", cat: "Talk",
       text: "Prof. Hyesong Choi gave an invited seminar, \u201cThree Challenges of Large-Scale Multimodal AI: Data, Efficiency, and Reliability,\u201d at the IT Convergence Major Workshop, Soongsil University." },
+    { date: "2026.06", cat: "Paper", star: true, links: ["A1", "A2", "A3", "A4", "A5", "A6", "A7"],
+      text: "Three papers are accepted at ECCV 2026: ECC (with Meta and UBC) and Aether (with NAVER AI Lab), both first-authored by Prof. Hyesong Choi, and a paper on unified multimodal models. Congratulations!" },
     { date: "2026.06", cat: "Lab", pending: true, // 월 확인
       text: "Sungjun Kim, a former SAIL member, joined SK hynix. Congratulations!" },
     { date: "2026.05", cat: "Grant", star: true, links: ["C1", "C2"],
@@ -88,7 +85,7 @@ window.SAIL_DATA = {
       text: "RobIA is accepted at NeurIPS 2025." },
     { date: "2025.11", cat: "Service",
       text: "Prof. Hyesong Choi has been appointed as a Board Member (\ud559\ud68c \uc774\uc0ac) of the International Conference on ICT Convergence (ICTC)." },
-    { date: "2025.10", cat: "Service", // 교수님 확인: 2025.10 (CV Advisory에는 "2026"으로 적혀 있음, 확인 중)
+    { date: "2025.10", cat: "Service", pending: true, // 월 확인
       text: "Prof. Hyesong Choi served as an expert advisor to KIST on physical-AI-based, city-scale safety and disaster response planning." },
     { date: "2025.09", cat: "Talk",
       text: "Prof. Hyesong Choi gave an invited expert lecture, \u201cFrom Pre-training to Transfer: Designing Parameter Pathways for AI Security,\u201d at the AI Security Research Center (ITRC), Soongsil University." },
@@ -102,57 +99,37 @@ window.SAIL_DATA = {
       text: "Prof. Hyesong Choi received her Ph.D. in Computer Science and Engineering from Ewha Womans University and was awarded the Outstanding Dissertation Award (Graduate School-wide)." }
   ],
 
-  /* ---------- 연구 기둥 (Home 카드 + Research 페이지) ----------
-     [2026.09] CV 번호 체계로 변경됨 */
+  /* ---------- 연구 기둥 (Home 카드 + Research 페이지) ---------- */
   pillars: [
     { id: "pillar-1", name: "Efficient Vision-Language Foundation Models",
       desc: "Training, data, and deployment of VLMs with less compute",
-      homePapers: ["C18", "C15", "C14", "C13", "P9"] },
+      homePapers: ["C14", "C13", "C12", "P15", "P14"] },
     { id: "pillar-2", name: "From Perception to Action: Physical AI",
       desc: "Visual RL, 3D perception, and VLA models for robots and driving",
       homePapers: ["C10", "C8", "C5", "C4"] },
     { id: "pillar-3", name: "Trustworthy and Secure AI",
       desc: "Deepfake detection, agent security, and auditing of LLMs",
-      homePapers: ["P8", "C17", "C16", "P7"] }
+      homePapers: ["P13", "W3", "W2", "P11"] }
   ],
 
-  /* ---------- Publications ----------
-     [2026.09] 교수님 최신 CV와 번호·분류를 통일함
-       - AISec, AGENT-SEC, WISA → Conference로 이동 (Workshop 묶음 없음)
-       - Preprint는 CV의 P1~P13 기준 (CV P3는 NeurIPS 2026 채택작 C18과 같은 논문이라 제외)
-     group: conf / journal / student (P 묶음1) / collab (P 묶음2)
+  /* ---------- Publications (STEP 4 목록) ----------
+     group: conf / journal / workshop / student (P 묶음1) / collab (P 묶음2)
      tag: 배지에 들어갈 짧은 이름. top: true → CVPR/ICCV/ECCV/NeurIPS 진한 배지
-     area: Research 페이지 소제목 */
+     area: Research 페이지 소제목 (STEP 3) */
   publications: [
     // ----- Conference -----
-    { id: "C18", group: "conf", tag: "NeurIPS", top: true, year: 2026, area: "1-A",
-      title: "Disentangling Channel Semantics in Vision Transformers via Token Decorrelation and Composition-Aware Modulation",
-      authors: "Daeun Kim, Hyejin Park, Hyesong Choi, and Dongbo Min",
-      venue: "NeurIPS 2026" },
-    { id: "C17", group: "conf", tag: "AISec", year: 2026, area: "3-B",
-      title: "Why AI-Assisted Security Monitoring Is Hard to Deploy: A Taxonomy of Policy-to-Operation Gaps in Industrial Control Environments",
-      authors: "Jeong-Han Yun, Jina Kang, and Hyesong Choi\u2020",
-      venue: "AISec 2026 (ACM CCS Workshop on Artificial Intelligence and Security)" },
-    { id: "C16", group: "conf", tag: "AGENT-SEC", year: 2026, area: "3-B",
-      title: "When Recovery Fails Open: A Controlled Study of Execution-Layer Attack Surfaces in Browser Agents",
-      authors: "Soobin Yim, ChanHyeok Lim, Thien-Phuc Doan, Hyesong Choi, and Souhwan Jung",
-      venue: "AGENT-SEC 2026 (ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems)" },
-    { id: "C15", group: "conf", tag: "ECCV", top: true, year: 2026, area: "1-A",
+    { id: "C14", group: "conf", tag: "ECCV", top: true, year: 2026, area: "1-A",
       title: "ECC: Encoder-Centric Corruption for Fine-Grained Vision in VLMs",
       authors: "Hyesong Choi, Daeun Kim, Sungmin Cha, Kwang Moo Yi, and Dongbo Min",
       venue: "ECCV 2026", note: "Collaboration with Meta and UBC" },
-    { id: "C14", group: "conf", tag: "ECCV", top: true, year: 2026, area: "1-A",
+    { id: "C13", group: "conf", tag: "ECCV", top: true, year: 2026, area: "1-A",
       title: "Isotropic Embedding Perturbations for Robust Vision Language Encoders",
       authors: "Hyesong Choi, Daeun Kim, Song Park, Taekyung Kim, Byeongho Heo, Sangdoo Yun, Dongbo Min, and Dongyoon Han",
       venue: "ECCV 2026", note: "Collaboration with NAVER AI Lab (\u201cAether\u201d)" },
-    { id: "C13", group: "conf", tag: "ECCV", top: true, year: 2026, area: "1-A",
+    { id: "C12", group: "conf", tag: "ECCV", top: true, year: 2026, area: "1-A",
       title: "Enhancing Alignment for Unified Multimodal Models via Semantically-Grounded Supervision",
       authors: "Jiyeong Kim, Yerim So, Hyesong Choi, Uiwon Hwang, and Dongbo Min",
       venue: "ECCV 2026", links: { paper: "https://arxiv.org/abs/2603.19807" } },
-    { id: "C12", group: "conf", tag: "WISA", year: 2026, area: "3-B",
-      title: "When Task Success Hides Took Misuse: Analyzing Silent Compromise in Browser-Use Agents", // CV 원문 그대로. "Took" → "Tool" 오타인지 교수님 확인 중
-      authors: "Soobin Yim, ChanHyeok Lim, Hung Dinh-Xuan, Hyesong Choi, and Souhwan Jung",
-      venue: "WISA 2026 (World Conference on Information Security Applications), Jeju, Korea" },
     { id: "C11", group: "conf", tag: "ICASSP", year: 2026, area: "1-C",
       title: "CLDA: Collaborative Learning for Enhanced Unsupervised Domain Adaptation",
       authors: "Minhee Cho, Hyesong Choi, Hayeon Jo, and Dongbo Min",
@@ -224,78 +201,81 @@ window.SAIL_DATA = {
       authors: "Wonil Song, Sangryul Jeon, Hyesong Choi, Kwanghoon Sohn, and Dongbo Min",
       venue: "Expert Systems with Applications (ESWA), IF 7.5, 2023", links: { paper: "https://www.sciencedirect.com/science/article/abs/pii/S0957417423011272" } },
 
-    // ----- Manuscripts under Review and Preprints: 묶음 1 (학생 주도, CV에서 밑줄 학생 1저자) -----
-    { id: "P13", group: "student", tag: "Under review", year: 2026, area: "1-A",
-      title: "Vision-Language Models Cannot Tell What Moves Without Knowing How They Move",
-      authors: "_Yoonsu Kim_ and Hyesong Choi\u2020",
-      venue: "Under review, 2026" },
-    { id: "P12", group: "student", tag: "Under review", year: 2026, area: "1-C",
-      title: "Deeper Is Not Better for Quantized CLIP: Early Readout Recovers Accuracy While Cutting Compute",
-      authors: "_Kahyeon Nam_ and Hyesong Choi\u2020",
-      venue: "Under review, 2026" },
-      // 이전 제목 "The Rescue Effect" arXiv 링크: http://arxiv.org/abs/2605.26415 (CV에 arXiv 표기 없어 일단 뺌)
-    { id: "P11", group: "student", tag: "Under review", year: 2026, area: "3-A",
-      title: "Rationale Content Shapes What a Detector Learns: Controlled Supervision for Person-Centric AI-Image Forensics",
-      authors: "_Jihyeon Kim_, _Sohee Kim_, _Soosan Lee_, and Hyesong Choi\u2020",
-      venue: "Under review, 2026" },
-    { id: "P10", group: "student", tag: "Under review", year: 2026, area: "1-C",
-      title: "The Price of a Merge Is Paid in Depth: A Tight, Label-Free Bound on Token Merging in Vision Transformers",
-      authors: "_Semi Lee_, _Hyejin Go_, and Hyesong Choi\u2020",
-      venue: "Under review, 2026" },
-      // 이전 제목 "AdaMerge" arXiv 링크: https://arxiv.org/abs/2605.27465 (CV에 arXiv 표기 없어 일단 뺌)
-    { id: "P9", group: "student", tag: "Under review", year: 2026, area: "1-B",
-      title: "Aligned Is Not Supported: Attributing Image\u2013Text Alignment to Caption Phrases for Data Selection",
+    // ----- Workshop and Poster (AI Security) -----
+    { id: "W3", group: "workshop", tag: "AISec", year: 2026, area: "3-B",
+      title: "Why AI-Assisted Security Monitoring Is Hard to Deploy: A Taxonomy of Policy-to-Operation Gaps in Industrial Control Environments",
+      authors: "Jeong-Han Yun, Jina Kang, and Hyesong Choi\u2020",
+      venue: "AISec 2026 (ACM Workshop on Artificial Intelligence and Security, co-located with ACM CCS)" },
+    { id: "W2", group: "workshop", tag: "AGENT-SEC", year: 2026, area: "3-B",
+      title: "When Recovery Fails Open: A Controlled Study of Execution-Layer Attack Surfaces in Browser Agents",
+      authors: "Soobin Yim, ChanHyeok Lim, Thien-Phuc Doan, Hyesong Choi, and Souhwan Jung",
+      venue: "AGENT-SEC 2026 (ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems)" },
+    { id: "W1", group: "workshop", tag: "WISA", year: 2026, area: "3-B", pending: true, // 제목 받으면 pending 지우기
+      title: "(Poster title to be confirmed)", // 교수님께 제목 받기
+      authors: "Jina Kang, Jeong-Han Yun, and Hyesong Choi\u2020",
+      venue: "WISA 2026, Poster Session, Jeju, Korea" },
+
+    // ----- Manuscripts under Review and Preprints: 묶음 1 (학생 주도) -----
+    { id: "P15", group: "student", tag: "arXiv", year: 2026, area: "1-B",
+      title: "What Does the Caption Really Say? Counterfactual Phrase Intervention for Compositional Data Selection in Vision-Language Pretraining",
       authors: "_Hyejin Go_, _Semi Lee_, and Hyesong Choi\u2020",
-      venue: "Under review, 2026" },
-      // 이전 제목 "Counterfactual Phrase Intervention" arXiv 링크: https://arxiv.org/abs/2605.22651 (CV에 arXiv 표기 없어 일단 뺌)
-    { id: "P8", group: "student", tag: "arXiv", year: 2026, area: "3-A",
+      venue: "arXiv:2605.22651, 2026 (under review)", links: { paper: "https://arxiv.org/abs/2605.22651" } },
+    { id: "P14", group: "student", tag: "arXiv", year: 2026, area: "1-C",
+      title: "AdaMerge: Salience-Aware Adaptive Token Merging for Training-Free Acceleration of Vision Transformers",
+      authors: "_Semi Lee_, _Hyejin Go_, and Hyesong Choi\u2020",
+      venue: "arXiv:2605.27465, 2026 (under review)", links: { paper: "https://arxiv.org/abs/2605.27465" } },
+    { id: "P13", group: "student", tag: "arXiv", year: 2026, area: "3-A",
       title: "When Eyes Betray AI: Social Gaze Consistency as a Semantic Cue for AI-Generated Image Detection",
       authors: "_Jihyeon Kim_, _Sohee Kim_, _Soosan Lee_, Souhwan Jung, James M. Rehg, and Hyesong Choi\u2020",
-      venue: "arXiv:2605.27348, 2026", note: "Collaboration with UIUC",
+      venue: "arXiv:2605.27348, 2026 (under review)", note: "Collaboration with UIUC",
       links: { paper: "https://arxiv.org/abs/2605.27348" } },
-    { id: "P7", group: "student", tag: "Under review", year: 2026, area: "3-B",
+    { id: "P12", group: "student", tag: "arXiv", year: 2026, area: "1-C",
+      title: "The Rescue Effect: Spatio-Semantic Early Exit Bypasses Quantization Collapse in CLIP",
+      authors: "_Kahyeon Nam_ and Hyesong Choi\u2020",
+      venue: "arXiv:2605.26415, 2026 (under review)", links: { paper: "http://arxiv.org/abs/2605.26415" } },
+    { id: "P11", group: "student", tag: "Under review", year: 2026, area: "3-B",
       title: "LLM Verifiers Are Wrong Together: Confident Consensus Errors Set the Floor for Failure Prediction",
       authors: "_Soyeon Oh_ and Hyesong Choi\u2020",
       venue: "Under review, 2026" },
-    { id: "P6", group: "student", tag: "Under review", year: 2026, area: "3-B",
-      title: "Influential but Misaligned: LLM Evidence Drives Predictions Yet Misses What Institutions Classified",
+    { id: "P10", group: "student", tag: "Under review", year: 2026, area: "3-B",
+      title: "Influential but Misaligned: Auditing LLM Evidence against Institutional Classification Records",
       authors: "_Jihyeon Kim_, _Sohee Kim_, and Hyesong Choi\u2020",
       venue: "Under review, 2026" },
-    { id: "P5", group: "student", tag: "Under review", year: 2026, area: "3-A",
-      title: "Most of the Ablation Gain Was the Baseline\u2019s Training Budget: A Placebo-Controlled Audit of Evidence-Guided Deepfake Detection",
+    { id: "P9", group: "student", tag: "Under review", year: 2026, area: "3-A",
+      title: "Single-Run Ablations Cannot Tell the Map from the Module: A Placebo-Controlled Audit of Evidence-Guided Deepfake Detection",
       authors: "_Soosan Lee_ and Hyesong Choi\u2020",
       venue: "Under review, 2026" },
 
     // ----- 묶음 2 (First-author and collaborative work) -----
-    { id: "P4", group: "collab", tag: "Under review", year: 2026, area: "1-B",
-      title: "Select What Resists Compression: Reconstruction Code Length for Label-Free Data Selection",
+    { id: "P8", group: "collab", tag: "Under review", year: 2026, area: "1-B",
+      title: "CORE: Corruption-Reconstruction based Data Filtering Network",
       authors: "Hyesong Choi, Daeun Kim, Seungmin Baek, Taekyung Kim, Byeongho Heo, Dongbo Min, and Dongyoon Han",
-      venue: "Under review, 2026", note: "Collaboration with NAVER AI Lab" },
-    // CV의 P3 (Disentangling Channel Semantics...)는 NeurIPS 2026 채택작 C18과 같은 논문이라 넣지 않음
-    { id: "P2", group: "collab", tag: "Under review", year: 2026, area: "1-A",
+      venue: "Under review, 2026" },
+    { id: "P7", group: "collab", tag: "Under review", year: 2026, area: "1-A",
+      title: "Disentangling Channel Semantics in Vision Transformers via Token Decorrelation and Composition-Aware Modulation",
+      authors: "Daeun Kim, Hyejin Park, Hyesong Choi, and Dongbo Min",
+      venue: "Under review, 2026" },
+    { id: "P6", group: "collab", tag: "Preprint", year: 2025, area: "1-A",
       title: "Bootstrap Your Own Noise: Denoising and Latent Prediction Cooperate Only When Noise Is Informative and Alignment Is Gated",
       authors: "Hyesong Choi, Daeun Kim, and Dongbo Min",
-      venue: "Under review, 2026" },
-    { id: "P1", group: "collab", tag: "Preprint", year: 2025, area: "3-C",
-      title: "Student-Guided Teacher Adaptation for Robust Adversarial Distillation",
-      authors: "Hyejin Park, Hyesong Choi, and Dongbo Min",
       venue: "Preprint, 2025" },
-
-    // ----- CV에서 빠진 기존 논문 (pending: true → 화면에 안 보임) -----
-    // 교수님이 빼라고 하시면 이 4개 삭제, 다시 넣으라고 하시면 pending 지우고 번호 부여
-    { id: "X1", group: "collab", tag: "arXiv", year: 2024, area: "1-A", pending: true,
+    { id: "P5", group: "collab", tag: "arXiv", year: 2024, area: "1-A",
       title: "How Should Corruption Be Used in SSL? Empirical Insights for Effective Pretraining",
       authors: "Hyesong Choi, Daeun Kim, Sungmin Cha, Kwang Moo Yi, and Dongbo Min",
       venue: "arXiv:2412.19104", links: { paper: "https://arxiv.org/abs/2412.19104" } },
-    { id: "X2", group: "collab", tag: "Preprint", year: 2025, area: "app-bio", pending: true,
+    { id: "P4", group: "collab", tag: "Preprint", year: 2025, area: "3-C",
+      title: "Student-Guided Teacher Adaptation for Robust Adversarial Distillation",
+      authors: "Hyejin Park, Hyesong Choi, and Dongbo Min",
+      venue: "Preprint, 2025" },
+    { id: "P3", group: "collab", tag: "Preprint", year: 2025, area: "app-bio",
       title: "Rethinking Masked Autoencoders for Multi-Channel Fluorescence Microscopy: Adaptive Inter-Channel Masking",
       authors: "Daeun Kim, Hyesong Choi, Hyejin Park, and Dongbo Min",
       venue: "Preprint, 2025" },
-    { id: "X3", group: "collab", tag: "arXiv", year: 2024, area: "1-C", pending: true,
+    { id: "P2", group: "collab", tag: "arXiv", year: 2024, area: "1-C",
       title: "iConFormer: Dynamic Parameter-Efficient Tuning with Input-Conditioned Adaptation",
       authors: "Hayeon Jo, Hyesong Choi, Minhee Cho, and Dongbo Min",
       venue: "arXiv:2409.02838", links: { paper: "https://arxiv.org/abs/2409.02838" } },
-    { id: "X4", group: "collab", tag: "arXiv", year: 2024, area: "1-A", pending: true,
+    { id: "P1", group: "collab", tag: "arXiv", year: 2024, area: "1-A",
       title: "SG-MIM: Structured Knowledge Guided Efficient Pre-training for Dense Prediction",
       authors: "Sumin Son, Hyesong Choi, and Dongbo Min",
       venue: "arXiv:2409.02513", links: { paper: "https://arxiv.org/abs/2409.02513" } }
