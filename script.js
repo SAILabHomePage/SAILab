@@ -45,6 +45,8 @@ window.SAIL_DATA = {
       text: "\u201cWhy AI-Assisted Security Monitoring Is Hard to Deploy\u201d is accepted at AISec 2026, the ACM Workshop on Artificial Intelligence and Security (co-located with ACM CCS). (Corresponding author)" },
     { date: "2026.09", cat: "Paper",
       text: "\u201cWhen Recovery Fails Open\u201d is accepted at AGENT-SEC 2026, the ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems." },
+    { date: "2026.09", cat: "Paper", star: true, links: ["A1", "A2", "A3", "A4", "A5", "A6", "A7"],
+      text: "Three papers are accepted at ECCV 2026: ECC (with Meta and UBC) and Aether (with NAVER AI Lab), both first-authored by Prof. Hyesong Choi, and a paper on unified multimodal models. Congratulations!" },
     { date: "2026.08", cat: "Media", star: true, links: ["B1", "B2"],
       text: "Prof. Hyesong Choi was featured in an interview with Issue Maker: \u201cA lab sailing relentlessly toward AGI.\u201d" },
     { date: "2026.08", cat: "Paper",
@@ -53,8 +55,6 @@ window.SAIL_DATA = {
       text: "Prof. Hyesong Choi was appointed as an Expert Committee Member of the Future Security Technology Forum (\ubbf8\ub798\ubcf4\uc548\uae30\uc220\ud3ec\ub7fc)." },
     { date: "2026.07", cat: "Talk",
       text: "Prof. Hyesong Choi gave an invited seminar, \u201cThree Challenges of Large-Scale Multimodal AI: Data, Efficiency, and Reliability,\u201d at the IT Convergence Major Workshop, Soongsil University." },
-    { date: "2026.06", cat: "Paper", star: true, links: ["A1", "A2", "A3", "A4", "A5", "A6", "A7"],
-      text: "Three papers are accepted at ECCV 2026: ECC (with Meta and UBC) and Aether (with NAVER AI Lab), both first-authored by Prof. Hyesong Choi, and a paper on unified multimodal models. Congratulations!" },
     { date: "2026.06", cat: "Lab", pending: true, // 월 확인
       text: "Sungjun Kim, a former SAIL member, joined SK hynix. Congratulations!" },
     { date: "2026.05", cat: "Grant", star: true, links: ["C1", "C2"],
@@ -85,7 +85,7 @@ window.SAIL_DATA = {
       text: "RobIA is accepted at NeurIPS 2025." },
     { date: "2025.11", cat: "Service",
       text: "Prof. Hyesong Choi has been appointed as a Board Member (\ud559\ud68c \uc774\uc0ac) of the International Conference on ICT Convergence (ICTC)." },
-    { date: "2025.10", cat: "Service", pending: true, // 월 확인
+    { date: "2025.10", cat: "Service",
       text: "Prof. Hyesong Choi served as an expert advisor to KIST on physical-AI-based, city-scale safety and disaster response planning." },
     { date: "2025.09", cat: "Talk",
       text: "Prof. Hyesong Choi gave an invited expert lecture, \u201cFrom Pre-training to Transfer: Designing Parameter Pathways for AI Security,\u201d at the AI Security Research Center (ITRC), Soongsil University." },
@@ -259,26 +259,10 @@ window.SAIL_DATA = {
       title: "Bootstrap Your Own Noise: Denoising and Latent Prediction Cooperate Only When Noise Is Informative and Alignment Is Gated",
       authors: "Hyesong Choi, Daeun Kim, and Dongbo Min",
       venue: "Preprint, 2025" },
-    { id: "P5", group: "collab", tag: "arXiv", year: 2024, area: "1-A",
-      title: "How Should Corruption Be Used in SSL? Empirical Insights for Effective Pretraining",
-      authors: "Hyesong Choi, Daeun Kim, Sungmin Cha, Kwang Moo Yi, and Dongbo Min",
-      venue: "arXiv:2412.19104", links: { paper: "https://arxiv.org/abs/2412.19104" } },
     { id: "P4", group: "collab", tag: "Preprint", year: 2025, area: "3-C",
       title: "Student-Guided Teacher Adaptation for Robust Adversarial Distillation",
       authors: "Hyejin Park, Hyesong Choi, and Dongbo Min",
-      venue: "Preprint, 2025" },
-    { id: "P3", group: "collab", tag: "Preprint", year: 2025, area: "app-bio",
-      title: "Rethinking Masked Autoencoders for Multi-Channel Fluorescence Microscopy: Adaptive Inter-Channel Masking",
-      authors: "Daeun Kim, Hyesong Choi, Hyejin Park, and Dongbo Min",
-      venue: "Preprint, 2025" },
-    { id: "P2", group: "collab", tag: "arXiv", year: 2024, area: "1-C",
-      title: "iConFormer: Dynamic Parameter-Efficient Tuning with Input-Conditioned Adaptation",
-      authors: "Hayeon Jo, Hyesong Choi, Minhee Cho, and Dongbo Min",
-      venue: "arXiv:2409.02838", links: { paper: "https://arxiv.org/abs/2409.02838" } },
-    { id: "P1", group: "collab", tag: "arXiv", year: 2024, area: "1-A",
-      title: "SG-MIM: Structured Knowledge Guided Efficient Pre-training for Dense Prediction",
-      authors: "Sumin Son, Hyesong Choi, and Dongbo Min",
-      venue: "arXiv:2409.02513", links: { paper: "https://arxiv.org/abs/2409.02513" } }
+      venue: "Preprint, 2025" }
   ]
 };
 
