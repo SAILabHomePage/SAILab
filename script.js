@@ -50,7 +50,7 @@ window.SAIL_DATA = {
     { date: "2026.08", cat: "Media", star: true, links: ["B1", "B2"],
       text: "Prof. Hyesong Choi was featured in an interview with Issue Maker: \u201cA lab sailing relentlessly toward AGI.\u201d" },
     { date: "2026.08", cat: "Paper",
-      text: "Our poster was presented at WISA 2026 (World Conference on Information Security Applications), Jeju, Korea. (Corresponding author)" },
+      text: "Our poster was presented at WISA 2026 (World Conference on Information Security Applications), Jeju, Korea." },
     { date: "2026.08", cat: "Service",
       text: "Prof. Hyesong Choi was appointed as an Expert Committee Member of the Future Security Technology Forum (\ubbf8\ub798\ubcf4\uc548\uae30\uc220\ud3ec\ub7fc)." },
     { date: "2026.07", cat: "Talk",
