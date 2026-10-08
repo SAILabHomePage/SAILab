@@ -24,28 +24,28 @@ window.SAIL_DATA = {
   /* ---------- Upcoming (News 맨 위 작은 상자) ----------
      until: 이 날짜가 지나면 자동으로 사라집니다. */
   upcoming: [
-    { date: "2026.11", cat: "Paper", until: "2026-11-15",
-      text: "Our paper will be presented at AGENT-SEC 2026, the ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems (Nov. 15, 2026)." },
     { date: "2026.10", cat: "Talk", until: "2026-10-08",
       text: "Prof. Hyesong Choi will give an invited talk, \u201cBeyond Pixels: Detecting AI-Generated Images through Social Gaze Consistency,\u201d at the 3rd NEIT Convergence Research Seminar, Soongsil University (Oct. 8, 2026)." }
   ],
 
   /* ---------- News (최신이 위) ----------
      cat: Paper / Grant / Talk / Service / Media / Lab / Award
-     star: true → 굵게 표시 */
+     star: true → 굵게 표시
+     papers: ["C15", ...] → 관련 기사 아래에 논문 제목 목록 표시 */
   news: [
     // ===== 2026 =====
+    { date: "2026.11", cat: "Paper",
+      text: "\u201cWhy AI-Assisted Security Monitoring Is Hard to Deploy\u201d is accepted at AISec 2026, the ACM Workshop on Artificial Intelligence and Security (co-located with ACM CCS). (Corresponding author)" },
+    { date: "2026.11", cat: "Paper",
+      text: "\u201cWhen Recovery Fails Open\u201d is accepted at AGENT-SEC 2026, the ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems." },
     { date: "2026.09", cat: "Lab",
       text: "Hyejin Go, Sohee Kim, and Jihyeon Kim, who started as undergraduate researchers in SAIL, joined the lab as graduate students. Welcome!" },
     { date: "2026.09", cat: "Paper",
       text: "Seven student-first-author manuscripts from SAIL are now under review, all with Prof. Hyesong Choi as corresponding author." },
     { date: "2026.09", cat: "Grant",
       text: "Awarded an industry-academia R&D project (Spartan SW, Phase II) on temporally aligned audio-visual-text multimodal models for short-form music content. (PI)" },
-    { date: "2026.09", cat: "Paper",
-      text: "\u201cWhy AI-Assisted Security Monitoring Is Hard to Deploy\u201d is accepted at AISec 2026, the ACM Workshop on Artificial Intelligence and Security (co-located with ACM CCS). (Corresponding author)" },
-    { date: "2026.09", cat: "Paper",
-      text: "\u201cWhen Recovery Fails Open\u201d is accepted at AGENT-SEC 2026, the ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems." },
     { date: "2026.09", cat: "Paper", star: true, links: ["A1", "A2", "A3", "A4", "A5", "A6", "A7"],
+      papers: ["C15", "C14", "C13"],
       text: "Three papers are accepted at ECCV 2026: ECC (with Meta and UBC) and Aether (with NAVER AI Lab), both first-authored by Prof. Hyesong Choi, and a paper on unified multimodal models. Congratulations!" },
     { date: "2026.08", cat: "Media", star: true, links: ["B1", "B2"],
       text: "Prof. Hyesong Choi was featured in an interview with Issue Maker: \u201cA lab sailing relentlessly toward AGI.\u201d" },
@@ -99,23 +99,25 @@ window.SAIL_DATA = {
       text: "Prof. Hyesong Choi received her Ph.D. in Computer Science and Engineering from Ewha Womans University and was awarded the Outstanding Dissertation Award (Graduate School-wide)." }
   ],
 
-  /* ---------- 연구 기둥 (Home 카드 + Research 페이지) ---------- */
+  /* ---------- 연구 기둥 (Home 카드 + Research 페이지) ----------
+     homePapers: Home "Recent Papers by Research Area" 카드에 보여줄 논문 번호 (적은 순서대로) */
   pillars: [
     { id: "pillar-1", name: "Efficient Vision-Language Foundation Models",
       desc: "Training, data, and deployment of VLMs with less compute",
-      homePapers: ["C15", "C14", "C13", "P9", "P10"] },
+      homePapers: ["C18", "C15", "C14", "C13", "P13", "P12", "P10", "P9"] },
     { id: "pillar-2", name: "From Perception to Action: Physical AI",
       desc: "Visual RL, 3D perception, and VLA models for robots and driving",
-      homePapers: ["C10", "C8", "C5", "C4"] },
+      homePapers: ["C10", "J5", "J3", "C8", "C5", "C4"] },
     { id: "pillar-3", name: "Trustworthy and Secure AI",
       desc: "Deepfake detection, agent security, and auditing of LLMs",
-      homePapers: ["P8", "C17", "C16", "P7"] }
+      homePapers: ["C17", "C16", "C12", "P8", "P11", "P7", "P6", "P5"] }
   ],
 
   /* ---------- Publications (교수님 최신 CV 번호) ----------
      group: conf / journal / workshop / student (P 묶음1) / collab (P 묶음2)
      tag: 배지에 들어갈 짧은 이름. top: true → CVPR/ICCV/ECCV/NeurIPS 진한 배지
-     area: Research 페이지 소제목 (STEP 3) */
+     area: Research 페이지 소제목 (STEP 3)
+     links.paper: 논문 주소 → Home 카드에 PDF 버튼 자동 생성 (arXiv abs 주소는 PDF로 자동 변환) */
   publications: [
     // ----- Conference -----
     { id: "C18", group: "conf", tag: "NeurIPS", top: true, year: 2026, area: "1-A",
@@ -292,6 +294,10 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---------- 공통 도우미 ---------- */
   const DATA = window.SAIL_DATA || {};
 
+  // 논문 번호 → 논문 정보 (뉴스, 카드, 목록에서 공용)
+  const pubById = {};
+  (DATA.publications || []).forEach((p) => { pubById[p.id] = p; });
+
   function esc(str) {
     return String(str)
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -303,6 +309,13 @@ document.addEventListener('DOMContentLoaded', function () {
     return esc(authors)
       .replace(/Hyesong Choi/g, '<strong class="pi-name">Hyesong Choi</strong>')
       .replace(/_([^_]+)_/g, '<u class="sail-student">$1</u>');
+  }
+
+  // 논문 PDF 주소 (arXiv 요약 페이지 주소는 PDF 주소로 바꿈)
+  function pdfUrl(p) {
+    const url = p && p.links && p.links.paper;
+    if (!url) return '';
+    return url.replace(/^http:\/\//, 'https://').replace('arxiv.org/abs/', 'arxiv.org/pdf/');
   }
 
   const BADGE_CLASS = {
@@ -322,11 +335,23 @@ document.addEventListener('DOMContentLoaded', function () {
     ).join(' ') + '</span>';
   }
 
+  // 뉴스 아래 논문 제목 목록 (news 항목의 papers: [...])
+  function newsPapers(ids) {
+    const items = (ids || []).map((id) => pubById[id]).filter(Boolean);
+    if (!items.length) return '';
+    return '<ul class="news-papers">' + items.map((p) =>
+      '<li><a href="publications.html#paper-' + esc(p.id) + '">' + esc(p.title) + '</a></li>'
+    ).join('') + '</ul>';
+  }
+
   function newsRow(item) {
     return '<li class="news-row' + (item.star ? ' is-star' : '') + '">' +
       '<span class="news-row-date">' + esc(item.date) + '</span>' +
       badge(item.cat) +
-      '<p class="news-row-text">' + esc(item.text) + relatedLinks(item.links) + '</p>' +
+      '<div class="news-row-body">' +
+        '<p class="news-row-text">' + esc(item.text) + relatedLinks(item.links) + '</p>' +
+        newsPapers(item.papers) +
+      '</div>' +
       '</li>';
   }
 
@@ -365,10 +390,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ).join('');
   });
 
-  /* ---------- Recent Papers by Research Area 카드 ---------- */
-  const pubById = {};
-  (DATA.publications || []).forEach((p) => { pubById[p.id] = p; });
-
+  /* ---------- Recent Papers by Research Area 카드 ----------
+     카드 제목·"View in Research" → Research 페이지
+     논문 제목 → Publications 페이지의 해당 논문
+     PDF 버튼 → 논문 원문 (links.paper가 있을 때만) */
   function venueLabel(p) {
     if (p.tag === 'Under review') return 'Under review, ' + p.year;
     return p.tag + ' ' + p.year;
@@ -376,19 +401,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.querySelectorAll('[data-render="area-cards"]').forEach((grid) => {
     grid.innerHTML = (DATA.pillars || []).map((pillar) => {
-      const papers = pillar.homePapers.map((id) => pubById[id]).filter(Boolean);
-      return '<a class="area-card" href="research.html#' + esc(pillar.id) + '">' +
-        '<h3 class="area-name">' + esc(pillar.name) + '</h3>' +
+      const papers = pillar.homePapers.map((id) => pubById[id]).filter((p) => p && !p.pending);
+      const more = 'research.html#' + esc(pillar.id);
+      return '<div class="area-card">' +
+        '<h3 class="area-name"><a href="' + more + '">' + esc(pillar.name) + '</a></h3>' +
         '<p class="area-desc">' + esc(pillar.desc) + '</p>' +
-        '<ul class="area-papers">' + papers.map((p) =>
-          '<li class="area-paper">' +
-            '<span class="venue' + (p.top ? ' venue--top' : '') + '">' + esc(venueLabel(p)) + '</span>' +
-            '<span class="area-paper-title">[' + esc(p.id) + '] ' + esc(p.title) + '</span>' +
+        '<ul class="area-papers">' + papers.map((p) => {
+          const pdf = pdfUrl(p);
+          return '<li class="area-paper">' +
+            '<span class="area-paper-top">' +
+              '<span class="venue' + (p.top ? ' venue--top' : '') + '">' + esc(venueLabel(p)) + '</span>' +
+              (pdf ? '<a class="area-pdf" href="' + esc(pdf) + '" target="_blank" rel="noopener noreferrer">PDF</a>' : '') +
+            '</span>' +
+            '<a class="area-paper-title" href="publications.html#paper-' + esc(p.id) + '">[' + esc(p.id) + '] ' + esc(p.title) + '</a>' +
             '<span class="area-paper-authors">' + formatAuthors(p.authors) + '</span>' +
-          '</li>').join('') +
+          '</li>';
+        }).join('') +
         '</ul>' +
-        '<span class="area-more">View in Research</span>' +
-        '</a>';
+        '<a class="area-more" href="' + more + '">View in Research</a>' +
+        '</div>';
     }).join('');
   });
 
@@ -430,7 +461,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const ids = list.dataset.papers.split(',').map((x) => x.trim()).filter(Boolean);
     list.innerHTML = ids.map((id) => pubById[id])
       .filter((p) => p && !p.pending)
-      .map(pubItem).join('');
+      .map((p) => pubItem(p, true)).join('');
   });
 
   /* ---------- 주소에 #위치가 있으면, 목록을 다 그린 뒤 다시 그 위치로 이동 ---------- */
