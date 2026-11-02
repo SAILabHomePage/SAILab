@@ -380,11 +380,22 @@ document.addEventListener('DOMContentLoaded', function () {
     box.innerHTML = '<p class="news-upcoming-title">Upcoming</p><ul class="news-upcoming-list">' +
       items.map(newsRow).join('') + '</ul>';
   });
-
-  /* ---------- News 목록 (data-limit 개수만큼) ---------- */
+  
+  /* ---------- Home News 목록 ---------- */
   document.querySelectorAll('[data-render="news"]').forEach((list) => {
-    const limit = parseInt(list.dataset.limit, 10) || visibleNews.length;
-    list.innerHTML = visibleNews.slice(0, limit).map(newsRow).join('');
+    const since = list.dataset.since || '';
+  
+    const items = since
+      ? visibleNews.filter((item) => item.date >= since)
+      : visibleNews;
+  
+    const limit = parseInt(list.dataset.limit, 10);
+  
+    const shownItems = Number.isFinite(limit)
+      ? items.slice(0, limit)
+      : items;
+  
+    list.innerHTML = shownItems.map(newsRow).join('');
   });
 
   /* ---------- News 전체 페이지 (연도별 묶음) ---------- */
