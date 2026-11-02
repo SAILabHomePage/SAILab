@@ -32,15 +32,28 @@ window.SAIL_DATA = {
      cat: Paper / Grant / Talk / Service / Media / Lab / Award
      star: true → 굵게 표시
      papers: ["C15", ...] → 관련 기사 아래에 논문 제목 목록 표시 */
-  news: [ // ===== 2026 =====
+  news: [
+    // ===== 2026 =====
     { date: "2026.12", cat: "Paper",
       text: "\u201cDisentangling Channel Semantics in Vision Transformers via Token Decorrelation and Composition-Aware Modulation\u201d has been accepted to NeurIPS 2026!" },
+  
+    { date: "2026.11", cat: "Talk",
+      text: "Prof. Hyesong Choi gave an invited talk, \u201cMedical AI Without Manual Annotation by Clinicians: The Next Generation of Medical AI\u2014Multimodal AI That Learns from and Jointly Interprets Medical Images, Test Results, and Clinical Records,\u201d at The Catholic University of Korea, Yeouido St. Mary's Hospital." },
+  
     { date: "2026.11", cat: "Paper",
       text: "\u201cWhy AI-Assisted Security Monitoring Is Hard to Deploy\u201d is accepted at AISec 2026, the ACM Workshop on Artificial Intelligence and Security (co-located with ACM CCS). (Corresponding author)" },
     { date: "2026.11", cat: "Paper",
       text: "\u201cWhen Recovery Fails Open\u201d is accepted at AGENT-SEC 2026, the ACM CCS Workshop on Security, Privacy, and Safety of Agentic AI Systems." },
+  
+    { date: "2026.10", cat: "Talk",
+      text: "Prof. Hyesong Choi gave an invited talk, \u201cLearning from Corruption: Toward Efficient and Trustworthy Vision-Language Models,\u201d at the Korean Computer Vision Society (KCVS) Fall Researcher Forum, Yonsei University." },
+  
+    { date: "2026.10", cat: "Talk",
+      text: "Prof. Hyesong Choi gave an invited talk, \u201cBeyond Pixels: Detecting AI-Generated Images through Social Gaze Consistency,\u201d at the 3rd NEIT (Natural Sciences, Engineering, and IT) Convergence Research Seminar, Soongsil University." },
+  
     { date: "2026.09", cat: "Lab",
       text: "Hyejin Go, Sohee Kim, and Jihyeon Kim, who started as undergraduate researchers in SAIL, joined the lab as graduate students. Welcome!" },
+    
     { date: "2026.09", cat: "Paper",
       text: "Seven student-first-author manuscripts from SAIL are now under review, all with Prof. Hyesong Choi as corresponding author." },
     { date: "2026.09", cat: "Grant",
