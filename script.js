@@ -32,8 +32,9 @@ window.SAIL_DATA = {
      cat: Paper / Grant / Talk / Service / Media / Lab / Award
      star: true → 굵게 표시
      papers: ["C15", ...] → 관련 기사 아래에 논문 제목 목록 표시 */
-  news: [
-    // ===== 2026 =====
+  news: [ // ===== 2026 =====
+    { date: "2026.12", cat: "Paper",
+      text: "\u201cDisentangling Channel Semantics in Vision Transformers via Token Decorrelation and Composition-Aware Modulation\u201d has been accepted to NeurIPS 2026!" },
     { date: "2026.11", cat: "Paper",
       text: "\u201cWhy AI-Assisted Security Monitoring Is Hard to Deploy\u201d is accepted at AISec 2026, the ACM Workshop on Artificial Intelligence and Security (co-located with ACM CCS). (Corresponding author)" },
     { date: "2026.11", cat: "Paper",
